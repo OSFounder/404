@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+Allow: https://404soundandlighting.tech/
+Disallow: https://404soundandlighting.tech/dev_page
+Disallow: https://404soundandlighting.tech/login
+
+Sitemap: https://404soundandlighting.tech/sitemap.xml

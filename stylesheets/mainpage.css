@@ -45,6 +45,7 @@ body {
   padding: 20px 16px;
   float: right;
 }
+
 #top-bar #right a {
   -webkit-transition: background 1s linear;
   -moz-transition: background 1s linear;
@@ -58,6 +59,7 @@ body {
   text-decoration: none;
   color: rgb(250, 255, 251, 0.8)
 }
+
 #top-bar #right a:hover, #top-bar img:hover {
   cursor: pointer;
   -webkit-transition: background 1s linear;
@@ -192,7 +194,7 @@ body {
 #main-desc {
   margin-bottom: 25vh;
   z-index: 100;
-  background-image: url("https://404soundandlighting.tech/front_page_one.png");
+  background-image: url("https://404soundandlighting.tech/images/home/front_page_one.png");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -221,7 +223,7 @@ body {
 
 #main-desc-two {
   z-index: 100;
-  background-image: url("https://404soundandlighting.tech/front_page_two.png");
+  background-image: url("https://404soundandlighting.tech/images/home/front_page_two.png");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -250,7 +252,7 @@ body {
   margin-top: 25vh;
   margin-bottom: 25vh;
   z-index: 100;
-  background-image: url("https://404soundandlighting.tech/front_page_three.png");
+  background-image: url("https://404soundandlighting.tech/images/home/front_page_three.png");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -473,7 +475,7 @@ footer p {
 }
 
 #parallax-content #p1 {
-  background-image: url("https://404soundandlighting.tech/pal1.jpg");
+  background-image: url("https://404soundandlighting.tech/images/booking/pal1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -481,7 +483,7 @@ footer p {
 }
 
 #parallax-content #p3 {
-  background-image: url("https://404soundandlighting.tech/pal2.jpg");
+  background-image: url("https://404soundandlighting.tech/images/booking/pal2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -489,7 +491,7 @@ footer p {
 }
 
 #parallax-content #p5 {
-  background-image: url("https://404soundandlighting.tech/pal3.jpg");
+  background-image: url("https://404soundandlighting.tech/images/booking/pal3.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

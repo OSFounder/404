@@ -10,6 +10,12 @@
 };
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+try {
+var db = firebase.firestore();
+}
+catch {
+  console.error('error loading firestore')
+}
 
 function makeGoogleCredential(googleUser) {
   // [START auth_make_google_credential]

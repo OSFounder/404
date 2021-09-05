@@ -1,10 +1,6 @@
 const txtEmail = document.getElementById('email_field');
 const txtPword = document.getElementById('pass_field');
 const binSignIn = document.getElementById('modal-form-submit');
-const binSignUp = document.getElementById('sign-up');
-const binForgot = document.getElementById('forgot-pword');
-const binSignOut = document.getElementById('log-out');
-const binRedirect = document.getElementById('redirect');
 const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 var dname = document.getElementById('dname');
@@ -98,7 +94,7 @@ function sendPasswordReset() {
   // [END auth_send_password_reset]
 }
 try {
-   binSignIn.addEventListener('click', e=> {
+   function signin() {
       signInWithEmailPassword();
       var email = txtEmail.value;
       var password = txtPword.value;
@@ -106,7 +102,7 @@ try {
       document.getElementById('email_field').value;
       document.getElementById('pass_field').value;
       authStateListener();
-   });
+   }
 }
 catch {
    console.log('ERROR 404: Sign In not located.')

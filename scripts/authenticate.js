@@ -9,7 +9,6 @@ catch {
 authStateListener();
 
 function signInWithEmailPassword(email, password) {                    
-  email = email.toLowerCase();
   // [START auth_signin_password]
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
@@ -88,8 +87,9 @@ function sendPasswordReset() {
 try {
    function signin() {
       signInWithEmailPassword();
-      var email = document.getElementById("email-field").value
-      var password = document.getElementById("pass-field").value
+      var email = document.getElementById("email-field").value;
+      email = email.toLowerCase();
+      var password = document.getElementById("pass-field").value;
       makeEmailCredential(email, password);
       authStateListener();
    }
@@ -100,7 +100,7 @@ catch {
 
 try {
    binSignUp.addEventListener('click', e=> {
-      signOut()
+      signOut();
       signUpWithEmailPassword();
       var email = txtEmail.value;
       var password = txtPword.value;

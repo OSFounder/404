@@ -2,7 +2,7 @@
 
 const txtEmail = document.getElementById('email-field');
 const txtPword = document.getElementById('pass-field');
-const binSignIn = document.getElementById('modal-form-submit');
+const binSignIn = document.getElementById('log_in');
 const binSignUp = document.getElementById('sign-up');
 const binForgot = document.getElementById('forgot-pword');
 const binSignOut = document.getElementById('log-out');

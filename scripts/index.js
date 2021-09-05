@@ -1,13 +1,12 @@
    //initialize application
    const firebaseConfig = {
-      apiKey: "AIzaSyAkuL0kZgwpJZpv0eJF8N_fh3mpsYCrFNQ",
-      authDomain: "nexus-database-b7220.firebaseapp.com",
-      databaseURL: "https://nexus-database-b7220-default-rtdb.firebaseio.com",
-      projectId: "nexus-database-b7220",
-      storageBucket: "nexus-database-b7220.appspot.com",
-      messagingSenderId: "75486796978",
-      appId: "1:75486796978:web:d4fb7013ad6131a6257dab",
-      measurementId: "G-RQNWQVCW9T"
+    apiKey: "AIzaSyAA8rnyKErsIZCN2itWfZMD5iu1WK-Odls",
+    authDomain: "sal-b2f24.firebaseapp.com",
+    projectId: "sal-b2f24",
+    storageBucket: "sal-b2f24.appspot.com",
+    messagingSenderId: "239998194766",
+    appId: "1:239998194766:web:7e7e7800e9000c025b9f1f",
+    measurementId: "G-YM1VPPHRVT"
 };
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();

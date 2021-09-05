@@ -1,4 +1,5 @@
 
+const binSignIn = document.getElementById("modal-form-submit");
 try {
 var db = firebase.firestore();
 }
@@ -84,13 +85,17 @@ function sendPasswordReset() {
     });
   // [END auth_send_password_reset]
 }
-function signin() {
+try {
+ binSignIn.addEventListener("click", e=> {
       signInWithEmailPassword();
       var email = document.getElementById("email-field").value;
       email = email.toLowerCase();
       var password = document.getElementById("pass-field").value;
       makeEmailCredential(email, password);
       authStateListener();
+}); } catch(e) {
+  console.error(e);
+}
 
 try {
    binSignUp.addEventListener('click', e=> {

@@ -1,5 +1,16 @@
 
-const binSignIn = document.getElementById("modal-form-submit");
+
+const txtEmail = document.getElementById('email-field');
+const txtPword = document.getElementById('pass-field');
+const binSignIn = document.getElementById('modal-form-submit');
+const binSignUp = document.getElementById('sign-up');
+const binForgot = document.getElementById('forgot-pword');
+const binSignOut = document.getElementById('log-out');
+const binRedirect = document.getElementById('redirect');
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+var dname = document.getElementById('dname');
+
 try {
 var db = firebase.firestore();
 }
@@ -9,7 +20,10 @@ catch {
 
 authStateListener();
 
-function signInWithEmailPassword(email, password) {                    
+function signInWithEmailPassword() {                    
+  var email = txtEmail.value;
+  var email = email.toLowerCase();
+  var password = txtPword.value;
   // [START auth_signin_password]
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
@@ -86,20 +100,23 @@ function sendPasswordReset() {
   // [END auth_send_password_reset]
 }
 try {
- binSignIn.addEventListener("click", e=> {
+   binSignIn.addEventListener('click', e=> {
       signInWithEmailPassword();
-      var email = document.getElementById("email-field").value;
-      email = email.toLowerCase();
-      var password = document.getElementById("pass-field").value;
+      var email = txtEmail.value;
+      var password = txtPword.value;
       makeEmailCredential(email, password);
+      document.getElementById('email_field').value;
+      document.getElementById('pass_field').value;
       authStateListener();
-}); } catch(e) {
-  console.error(e);
+   });
+}
+catch {
+   console.log('ERROR 404: Sign In not located.')
 }
 
 try {
    binSignUp.addEventListener('click', e=> {
-      signOut();
+      signOut()
       signUpWithEmailPassword();
       var email = txtEmail.value;
       var password = txtPword.value;
@@ -126,7 +143,7 @@ try {
    document.getElementById('logOut').addEventListener('click', e=> {
        signOut();
        authStateListener();
-       window.location.href = 'https://404soundandlighting.tech/';
+       window.location.href = 'https://nexuslive.tech/';
    });
 }
 catch {

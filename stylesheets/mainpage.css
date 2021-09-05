@@ -141,6 +141,9 @@ body {
 }
 
 #form-submit button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
   padding: 14px 16px;
   position: absolute;
   font-size: 20px;

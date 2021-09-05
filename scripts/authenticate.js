@@ -1,8 +1,3 @@
-var txtEmail = document.getElementById('#email-field');
-var txtPword = document.getElementById('#pass-field');
-var fname = document.getElementById('fname');
-var lname = document.getElementById('lname');
-var dname = document.getElementById('dname');
 
 try {
 var db = firebase.firestore();
@@ -95,8 +90,8 @@ function sendPasswordReset() {
 try {
    function signin() {
       signInWithEmailPassword();
-      var email = txtEmail.value;
-      var password = txtPword.value;
+      var email = document.getElementById("email-field").value
+      var password = document.getElementById("pass-field").value
       makeEmailCredential(email, password);
       document.getElementById('email_field').value;
       document.getElementById('pass_field').value;

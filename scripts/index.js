@@ -46,44 +46,14 @@ function signOut() {
 
 function authStateListener() {
   // [START auth_state_listener]
-     try {
-         document.getElementById('email_field').classList.add('hiden');
-         document.getElementById('pass_field').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('log-in').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-       try {
-         document.getElementById('redirect').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('forgot-pword').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('formR').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
       firebase.auth().onAuthStateChanged((user) => {
       if (user) {
          // User is signed in, see docs for a list of available properties
          // https://firebase.google.com/docs/reference/js/firebase.User
          var uid = user.uid;
-         document.getElementById('email_field').value='';
-         document.getElementById('pass_field').value='';
+         document.getElementById('email-field').value='';
+         document.getElementById('pass-field').value='';
+         /*
          try {
             document.getElementById('email_field').classList.add('hiden');
             document.getElementById('pass_field').classList.add('hiden');
@@ -115,14 +85,16 @@ function authStateListener() {
          catch(e) {
             console.error(e);
          }
+         */
          if (firebase.auth().currentUser.emailVerified) {
-              userUrl = new URL('https://nexuslive.tech/userPage.html');
+              userUrl = new URL('https://404soundandlighting.tech/');
               userUrl.searchParams.append('UID', uid);
               userUrl.searchParams.append('accountVerified', 'true');
               window.location.href = userUrl;
          }
          else {
              userUrl = new URL('https://nexuslive.tech/userPage.html');
+             userUrl.searchParams.append('UID', uid);
              userUrl.searchParams.append('accountVerified', 'false');
              window.location.href = userUrl;
              sendVerificationEmail();
@@ -133,6 +105,7 @@ function authStateListener() {
       else {
          // User is signed out
          // ...
+         /*
          try {
             document.getElementById('email_field').classList.remove('hiden');
             document.getElementById('pass_field').classList.remove('hiden');
@@ -169,6 +142,7 @@ function authStateListener() {
          document.getElementById('forgot-pword').classList.remove('hiden');
          document.getElementById('formR').classList.remove('hiden');
          }
+         */
   });
   // [END auth_state_listener]
 }

@@ -84,19 +84,13 @@ function sendPasswordReset() {
     });
   // [END auth_send_password_reset]
 }
-try {
-   function signin() {
+function signin() {
       signInWithEmailPassword();
       var email = document.getElementById("email-field").value;
       email = email.toLowerCase();
       var password = document.getElementById("pass-field").value;
       makeEmailCredential(email, password);
       authStateListener();
-   }
-}
-catch {
-   console.log('ERROR 404: Sign In not located.')
-}
 
 try {
    binSignUp.addEventListener('click', e=> {

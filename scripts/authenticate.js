@@ -136,7 +136,7 @@ try {
    document.getElementById('logOut').addEventListener('click', e=> {
        signOut();
        authStateListener();
-       window.location.href = 'https://nexuslive.tech/';
+       window.location.href = 'https://404soundandlighting.tech/';
    });
 }
 catch {

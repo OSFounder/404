@@ -18,8 +18,6 @@ catch {
   console.error('error loading firestore')
 }
 
-authStateListener();
-
 function signInWithEmailPassword() {                    
   var email = txtEmail.value;
   var email = email.toLowerCase();

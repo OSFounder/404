@@ -140,7 +140,7 @@ body {
   display: block;
 }
 
-#form-submit a {
+#form-submit button {
   padding: 14px 16px;
   position: absolute;
   font-size: 20px;
@@ -150,7 +150,7 @@ body {
   transition: all 2s ease;
 }
 
-#form-submit a:hover {
+#form-submit button:hover {
   background: white;
   color: black;
   transition: all 2s ease;

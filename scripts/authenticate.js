@@ -8,10 +8,8 @@ catch {
 
 authStateListener();
 
-function signInWithEmailPassword() {                    
-  var email = txtEmail.value;
-  var email = email.toLowerCase();
-  var password = txtPword.value;
+function signInWithEmailPassword(email, password) {                    
+  email = email.toLowerCase();
   // [START auth_signin_password]
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
@@ -93,8 +91,6 @@ try {
       var email = document.getElementById("email-field").value
       var password = document.getElementById("pass-field").value
       makeEmailCredential(email, password);
-      document.getElementById('email_field').value;
-      document.getElementById('pass_field').value;
       authStateListener();
    }
 }

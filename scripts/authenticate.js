@@ -1,6 +1,6 @@
 const txtEmail = document.getElementById('email_field');
 const txtPword = document.getElementById('pass_field');
-const binSignIn = document.getElementById('log-in');
+const binSignIn = document.getElementById('modal-form-submit');
 const binSignUp = document.getElementById('sign-up');
 const binForgot = document.getElementById('forgot-pword');
 const binSignOut = document.getElementById('log-out');

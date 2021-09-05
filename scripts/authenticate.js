@@ -1,8 +1,7 @@
-const txtEmail = document.getElementById('email_field');
-const txtPword = document.getElementById('pass_field');
-const binSignIn = document.getElementById('modal-form-submit');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
+var txtEmail = document.getElementById('#email-field');
+var txtPword = document.getElementById('#pass-field');
+var fname = document.getElementById('fname');
+var lname = document.getElementById('lname');
 var dname = document.getElementById('dname');
 
 try {

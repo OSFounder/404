@@ -142,11 +142,11 @@ function authStateListener() {
          document.getElementById('forgot-pword').classList.remove('hiden');
          document.getElementById('formR').classList.remove('hiden');
          }
-         */
+         
   });
   // [END auth_state_listener]
 }
-
+*/
 function setLanguageCode() {
   // [START auth_set_language_code]
   firebase.auth().languageCode = 'en';

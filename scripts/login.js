@@ -30,8 +30,9 @@ function authStateListener() {
          document.getElementById("sign-in").classList.remove("hidden");
       }
       catch(e) {
-         console.error(e)
+         console.error(e);
       }
+  
       firebase.auth().onAuthStateChanged((user) => {
       if (user) {
          // User is signed in, see docs for a list of available properties
@@ -86,6 +87,7 @@ function authStateListener() {
             console.error(e);
          }
   // [END auth_state_listener]
+      });
 }
 
 function authWithCredential(credential) {

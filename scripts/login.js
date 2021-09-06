@@ -92,4 +92,5 @@ function authWithCredential(credential) {
         setPersistenceSessionLow();
       }
         
+});
 }

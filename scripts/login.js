@@ -1,21 +1,4 @@
-
-
-function makeGoogleCredential(googleUser) {
-  // [START auth_make_google_credential]
-  var credential = firebase.auth.GoogleAuthProvider.credential(
-    googleUser.getAuthResponse().id_token);
-  // [END auth_make_google_credential]
-   authWithCredential(credential);
-}
-
-function makeFacebookCredential(response) {
-  // [START auth_make_facebook_credential]
-  var credential = firebase.auth.FacebookAuthProvider.credential(
-    response.authResponse.accessToken);
-  // [END auth_make_facebook_credential]
-   authWithCredential(credential);
-}
-
+alert(1);
 function makeEmailCredential(email, password) {
   // [START auth_make_email_credential]
   var credential = firebase.auth.EmailAuthProvider.credential(email, password);
@@ -105,14 +88,6 @@ function authStateListener() {
   // [END auth_state_listener]
 }
 
-function setLanguageCode() {
-  // [START auth_set_language_code]
-  firebase.auth().languageCode = 'en';
-  // To apply the default browser preference instead of explicitly setting it.
-  // firebase.auth().useDeviceLanguage();
-  // [END auth_set_language_code]
-}
-
 function authWithCredential(credential) {
   // [START auth_signin_credential]
   // Sign in with the credential from the user.
@@ -145,10 +120,4 @@ function authWithCredential(credential) {
       // ...
     });
   // [END auth_signin_credential]
-}
-
-function signInRedirect(provider) {
-  // [START auth_signin_redirect]
-  firebase.auth().signInWithRedirect(provider);
-  // [END auth_signin_redirect]
 }

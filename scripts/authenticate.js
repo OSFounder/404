@@ -137,9 +137,9 @@ try {
  }
 try {
   binRedirect.addEventListener('click', e=> {
-    binSignOut.classlist.add("hidden");
-    binSignIn.classlist.add("hidden");
-    binRedirect.classlist.add("hidden");
+    binSignOut.classList.add("hidden");
+    binSignIn.classList.add("hidden");
+    binRedirect.classList.add("hidden");
     document.getElementById("uname").classlist.remove("hidden");
     document.getElementById("sign-up").classlist.remove("hidden");
   }); } catch {

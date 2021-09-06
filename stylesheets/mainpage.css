@@ -152,6 +152,14 @@ body {
   outline: none;
 }
 
+#top-buttons {
+  font-family: arial;
+  font-size: 14px;
+  text-transform: none;
+  display: block
+  float left;
+}
+
 #form-submit {
   padding: 80px 16px;
   display: flex;
@@ -523,3 +531,4 @@ footer p {
 #bottom {
   padding: 200px;
 }
+

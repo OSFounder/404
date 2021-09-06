@@ -1,4 +1,4 @@
-   //initialize application
+
 alert("remove this");
    const firebaseConfig = {
     apiKey: "AIzaSyAA8rnyKErsIZCN2itWfZMD5iu1WK-Odls",

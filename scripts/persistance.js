@@ -35,4 +35,5 @@ function setPersistenceNone() {
       var errorCode = error.code;
       var errorMessage = error.message;
     });
-  // [END a
+   // [END auth_set_persistence_none]
+}

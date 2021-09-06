@@ -85,6 +85,21 @@ body {
   }
 }
 
+#profile {
+ 
+  float: right;
+  display: flex;
+  background-image: url("https://404soundandlighting.tech/images/profiles/default_profile.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 #login-modal {
   display: none;
   position: fixed;
@@ -606,4 +621,3 @@ footer p {
 #bottom {
   padding: 200px;
 }
-

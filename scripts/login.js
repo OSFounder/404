@@ -18,20 +18,6 @@ function signOut() {
 
 function authStateListener() {
   // [START auth_state_listener]
-     try {
-         document.getElementById("email-field").classList.add("hidden");
-         document.getElementById("pass-field").classList.add("hidden");
-         document.getElementById("forgot-pass").classList.add("hidden");
-         document.getElementById("log-out").classList.add("hidden");
-         document.getElementById('log-in').classList.add("hidden");
-         document.getElementById('register').classList.add("hidden");
-         document.getElementById("uname").classList.add("hidden");
-         document.getElementById("sign-up").classList.add("hidden");
-         document.getElementById("sign-in").classList.add("hidden");
-      }
-      catch(e) {
-         console.error(e);
-      }
   
       firebase.auth().onAuthStateChanged((user) => {
       if (user) {

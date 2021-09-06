@@ -27,7 +27,7 @@ function authStateListener() {
          document.getElementById('email-field').value='';
          document.getElementById('pass-field').value='';
          try {
-           document.getElementById("login-button").classlist.add("hidden");
+           document.getElementById("login-button").classList.add("hidden");
            document.getElementById("email-field").classList.add("hidden");
            document.getElementById("pass-field").classList.add("hidden");
            document.getElementById("forgot-pass").classList.add("hidden");
@@ -59,7 +59,7 @@ function authStateListener() {
          // User is signed out
          // ...
          try {
-           document.getElementById("login-button").classlist.remove("hidden");
+           document.getElementById("login-button").classList.remove("hidden");
            document.getElementById("email-field").classList.remove("hidden");
            document.getElementById("pass-field").classList.remove("hidden");
            document.getElementById("forgot-pass").classList.remove("hidden");

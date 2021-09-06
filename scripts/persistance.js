@@ -53,6 +53,5 @@ function setPersistenceNone() {
       var errorMessage = error.message;
     });
    // [END auth_set_persistence_none]
-});
 }
 

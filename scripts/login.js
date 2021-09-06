@@ -28,7 +28,7 @@ function openAcord() {
   if (document.getElementById("login-accordian").classList.contains("hidden")) {
     document.getElementById("login-accordian").classList.remove("hidden");
 
-    sleep(500).then(() => {
+    sleep(120000).then(() => {
          document.getElementById("login-accordian").classList.add("hidden");
     });
 }

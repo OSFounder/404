@@ -1,4 +1,4 @@
-alert(1);
+
 function makeEmailCredential(email, password) {
   // [START auth_make_email_credential]
   var credential = firebase.auth.EmailAuthProvider.credential(email, password);

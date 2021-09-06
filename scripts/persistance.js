@@ -1,8 +1,8 @@
-function setPersistenceSession() {
+function setPersistenceSessionHigh() {
    var email = txtEmail;
    var password = txtPword;
 
-    firebase.auth().setPersistenceHigh(firebase.auth.Auth.Persistence.LOCAL)
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
     .then(() => {
       // Existing and future Auth states are now persisted in the current
       // session only. Closing the window would clear any existing state even
@@ -18,7 +18,7 @@ function setPersistenceSession() {
     });
   // [END auth_set_persistence_session]
 }
-
+function setPersisntenceSessionLow() {
   // [START auth_set_persistence_session]
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
     .then(() => {

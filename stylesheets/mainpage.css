@@ -85,6 +85,29 @@ body {
   }
 }
 
+#login-accordian {
+  position: relative;
+  left: 90%;
+  width: 100px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: rgb(256, 256, 256, 0.8)
+}
+
+#login-accordian button {
+  background-image: linear-gradient(to left, #1290f8, #290082);
+  font-size: 15px;
+  padding: 10px 14px;
+  width: 100px;
+  color: white;
+}
+
+#login-accordian button:hover {
+  cursor: pointer;
+}
+
 #profile {
   float: right;
   display: flex;
@@ -324,12 +347,6 @@ body {
   margin-bottom: 40vh;
 }
 
-@media only screen and (max-width: 1150px) {
-  #main-desc p, #main-desc-two p, #main-desc-three p {
-    background-color: rgb(255, 255, 255, 0.4);
-  }
-}
-
 #main-desc-two p {
   text-align: center;
   float: right;
@@ -389,10 +406,11 @@ body {
 }
 
 #content {
+  position: absolute;
+  width: -webkit-fill-available;
   min-height: 100vh;
   overflow: hidden;
   display: block;
-  position: relative;
 
 }
 
@@ -629,3 +647,4 @@ footer p {
 #bottom {
   padding: 200px;
 }
+

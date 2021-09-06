@@ -22,9 +22,7 @@ const binSignUp = document.getElementById('sign-up');
 const binForgot = document.getElementById('forgot-pass');
 const binSignOut = document.getElementById('log-out');
 const binRedirect = document.getElementById('register');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
-var dname = document.getElementById('dname');
+var uname = document.getElementById('uname');
 
 function signInWithEmailPassword() {                    
   var email = txtEmail.value;
@@ -65,6 +63,15 @@ function signUpWithEmailPassword() {
       // Signed in 
       sendVerificationEmail()
       var user = firebase.auth().currentUser;
+      db.collection("users").doc(user).set({
+          username: uname
+      })
+      .then(() => {
+          console.log("Document successfully written!");
+      })
+      .catch((error) => {
+          console.error("Error writing document: ", error);
+      });
       window.location.replace("https://404soundandlighting.tech");
      
       // ...

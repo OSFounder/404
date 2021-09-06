@@ -130,6 +130,17 @@ body {
   font-weight: 109;
 }
 
+#modal-login-form button {
+  text-decoration: none;
+  padding: 14px 16px;
+  background-color: white;
+}
+
+#modal-login-form button:hover {
+  color: blue;
+  cursor: pointer;
+}
+
 #modal-login-form input {
   font-size: 20px;
   display: inline-block;

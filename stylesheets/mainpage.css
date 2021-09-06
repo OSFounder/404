@@ -143,15 +143,17 @@ body {
 
 #form-submit {
   padding: 80px 16px;
-  display: block;
+  display: flex;
+  justify-content:space-evenly;
 }
 
 #form-submit button {
+  border-radius: 40px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   padding: 14px 16px;
-  position: absolute;
+  width: 120px;
   font-size: 20px;
   background-image: linear-gradient(to left, #1290f8, #290082);
   color: white;

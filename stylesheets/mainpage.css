@@ -324,6 +324,12 @@ body {
   margin-bottom: 40vh;
 }
 
+@media only screen and (max-width: 1150px) {
+  #main-desc p, #main-desc-two p, #main-desc-three p {
+    background-color: rgb(255, 255, 255, 0.4);
+  }
+}
+
 #main-desc-two p {
   text-align: center;
   float: right;

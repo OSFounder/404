@@ -160,7 +160,7 @@ catch {
    console.log('ERROR 404: Forgot not located.')
 }
 try {
-   document.getElementById('logOut').addEventListener('click', e=> {
+   document.getElementById('log-out').addEventListener('click', e=> {
        signOut();
        authStateListener();
    });

@@ -137,9 +137,11 @@ try {
  }
 try {
   binRedirect.addEventListener('click', e=> {
+    binSignOut.classlist.add("hidden");
     binSignIn.classlist.add("hidden");
     binRedirect.classlist.add("hidden");
-    document.getElementById("uname").classlist.remove("hidden")
+    document.getElementById("uname").classlist.remove("hidden");
+    document.getElementById("sign-up").classlist.remove("hidden");
   }); } catch {
     console.error("ERROR 404: Redirect not found.");
   }

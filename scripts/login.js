@@ -86,8 +86,9 @@ function authStateListener() {
          catch(e) {
             console.error(e);
          }
-  // [END auth_state_listener]
+      }
       });
+  // [END auth_state_listener]
 }
 
 function authWithCredential(credential) {

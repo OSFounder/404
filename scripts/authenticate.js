@@ -1,4 +1,4 @@
-alert(1);
+
 try {
 var db = firebase.firestore();
 }

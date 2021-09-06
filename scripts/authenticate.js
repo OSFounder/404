@@ -63,6 +63,7 @@ function signUpWithEmailPassword() {
       // Signed in 
       sendVerificationEmail()
       var user = firebase.auth().currentUser;
+      alert(user);
       db.collection("users").doc(user).set({
           username: uname
       })

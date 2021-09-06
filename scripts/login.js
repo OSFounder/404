@@ -102,7 +102,6 @@ function authStateListener() {
          catch(e) {
             console.error(e);
          }
-  });
   // [END auth_state_listener]
 }
 

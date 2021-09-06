@@ -38,7 +38,10 @@ function signInWithEmailPassword() {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      // ...
+      var email = txtEmail.value;
+      var password = txtPword.value;
+      makeEmailCredential(email, password);
+      authStateListener();
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -51,8 +54,6 @@ function signInWithEmailPassword() {
 const sendVerificationEmail = () => {
    firebase.auth().currentUser.sendEmailVerification()
    .then(() => {
-      //verified
-      window.alert('Verification sent, check your inbox (may be in your spam files)');
    })
    .catch( error => {
           console.error('error');
@@ -68,18 +69,11 @@ function signUpWithEmailPassword() {
     .then((userCredential) => {
       // Signed in 
       var user = firebase.auth().currentUser;
-
-      db.collection("users").add({
-          first: fname,
-          last: lname,
-          displayName: dname
-      })
-      .then((docRef) => {
-          console.log("Document written with ID: ", docRef.uid);
-      })
-      .catch((error) => {
-          console.error("Error adding document: ", error);
-      });
+      var email = txtEmail.value;
+      var password = txtPword.value;
+      makeEmailCredential(email, password);
+      sendVerificationEmail()
+      authStateListener();
      
       // ...
     })
@@ -111,10 +105,6 @@ function sendPasswordReset() {
 try {
    binSignIn.addEventListener('click', e=> {
       signInWithEmailPassword();
-      var email = txtEmail.value;
-      var password = txtPword.value;
-      makeEmailCredential(email, password);
-      authStateListener();
    });
 }
 catch {
@@ -123,13 +113,7 @@ catch {
 
 try {
    binSignUp.addEventListener('click', e=> {
-      signOut()
       signUpWithEmailPassword();
-      var email = txtEmail.value;
-      var password = txtPword.value;
-      makeEmailCredential(email, password);
-      sendVerificationEmail()
-      authStateListener();
    });
    }
  catch(e) {

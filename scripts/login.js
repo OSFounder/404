@@ -16,17 +16,18 @@ function signOut() {
   // [END auth_sign_out]
 }
 
+document.getElementById("profile").addEvenetListener('click', e=> {
+  window.location.replace(userUrl);
+});
+
 function authStateListener() {
   // [START auth_state_listener]
   
       firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-         // User is signed in, see docs for a list of available properties
-         // https://firebase.google.com/docs/reference/js/firebase.User
          var uid = user.uid;
-         document.getElementById('email-field').value='';
-         document.getElementById('pass-field').value='';
          try {
+           document.getElementById("profile").classList.remove("hidden");
            document.getElementById("login-button").classList.add("hidden");
            document.getElementById("email-field").classList.add("hidden");
            document.getElementById("pass-field").classList.add("hidden");
@@ -59,6 +60,7 @@ function authStateListener() {
          // User is signed out
          // ...
          try {
+           document.getElementById("profile").classList.add("hidden");
            document.getElementById("login-button").classList.remove("hidden");
            document.getElementById("email-field").classList.remove("hidden");
            document.getElementById("pass-field").classList.remove("hidden");

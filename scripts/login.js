@@ -36,32 +36,15 @@ function signOut() {
 function authStateListener() {
   // [START auth_state_listener]
      try {
-         document.getElementById('email_field').classList.add('hiden');
-         document.getElementById('pass_field').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('log-in').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-       try {
-         document.getElementById('redirect').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('forgot-pword').classList.add('hiden');
-      }
-      catch(e) {
-         console.error(e)
-      }
-      try {
-         document.getElementById('formR').classList.add('hiden');
+         document.getElementById("email-field").classList.add("hidden");
+         document.getElementById("pass-field").classList.add("hidden");
+         document.getElementById("forgot-pass").classList.add("hidden");
+         document.getElementById("log-out").classList.add("hidden");
+         document.getElementById('log-in').classList.add("hidden");
+         document.getElementById('register').classList.add("hidden");
+         document.getElementById("uname").classList.remove("hidden");
+         document.getElementById("sign-up").classList.remove("hidden");
+         document.getElementById("sign-in").classList.remove("hidden");
       }
       catch(e) {
          console.error(e)
@@ -71,35 +54,18 @@ function authStateListener() {
          // User is signed in, see docs for a list of available properties
          // https://firebase.google.com/docs/reference/js/firebase.User
          var uid = user.uid;
-         document.getElementById('email_field').value='';
-         document.getElementById('pass_field').value='';
+         document.getElementById('email-field').value='';
+         document.getElementById('pass-field').value='';
          try {
-            document.getElementById('email_field').classList.add('hiden');
-            document.getElementById('pass_field').classList.add('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('log-in').classList.add('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-          try {
-            document.getElementById('redirect').classList.add('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('forgot-pword').classList.add('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('formR').classList.add('hiden');
+           document.getElementById("email-field").classList.add("hidden");
+           document.getElementById("pass-field").classList.add("hidden");
+           document.getElementById("forgot-pass").classList.add("hidden");
+           document.getElementById("log-out").classList.remove("hidden");
+           document.getElementById('log-in').classList.add("hidden");
+           document.getElementById('register').classList.add("hidden");
+           document.getElementById("uname").classList.remove("hidden");
+           document.getElementById("sign-up").classList.remove("hidden");
+           document.getElementById("sign-in").classList.remove("hidden");
          }
          catch(e) {
             console.error(e);
@@ -123,40 +89,18 @@ function authStateListener() {
          // User is signed out
          // ...
          try {
-            document.getElementById('email_field').classList.remove('hiden');
-            document.getElementById('pass_field').classList.remove('hiden');
+           document.getElementById("email-field").classList.remove("hidden");
+           document.getElementById("pass-field").classList.remove("hidden");
+           document.getElementById("forgot-pass").classList.remove("hidden");
+           document.getElementById("log-out").classList.add("hidden");
+           document.getElementById('log-in').classList.remove("hidden");
+           document.getElementById('register').classList.remove("hidden");
+           document.getElementById("uname").classList.remove("hidden");
+           document.getElementById("sign-up").classList.remove("hidden");
+           document.getElementById("sign-in").classList.remove("hidden");
          }
          catch(e) {
             console.error(e);
-         }
-         try {
-            document.getElementById('log-in').classList.remove('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('redirect').classList.remove('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('forgot-pword').classList.remove('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         try {
-            document.getElementById('formR').classList.remove('hiden');
-         }
-         catch(e) {
-            console.error(e);
-         }
-         document.getElementById('log-in').classList.remove('hiden');
-         document.getElementById('redirect').classList.remove('hiden');
-         document.getElementById('forgot-pword').classList.remove('hiden');
-         document.getElementById('formR').classList.remove('hiden');
          }
   });
   // [END auth_state_listener]

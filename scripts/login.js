@@ -74,6 +74,7 @@ function authStateListener() {
          // User is signed out
          // ...
          try {
+           document.getElementById("login-accordian").classList.add("hidden");
            document.getElementById("profile").classList.add("hidden");
            document.getElementById("login-button").classList.remove("hidden");
            document.getElementById("email-field").classList.remove("hidden");

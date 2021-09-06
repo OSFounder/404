@@ -114,8 +114,6 @@ try {
       var email = txtEmail.value;
       var password = txtPword.value;
       makeEmailCredential(email, password);
-      document.getElementById('email_field').value;
-      document.getElementById('pass_field').value;
       authStateListener();
    });
 }
@@ -130,8 +128,6 @@ try {
       var email = txtEmail.value;
       var password = txtPword.value;
       makeEmailCredential(email, password);
-      document.getElementById('email_field').value;
-      document.getElementById('pass_field').value;
       sendVerificationEmail()
       authStateListener();
    });
@@ -152,7 +148,6 @@ try {
    document.getElementById('logOut').addEventListener('click', e=> {
        signOut();
        authStateListener();
-       window.location.href = 'https://nexuslive.tech/';
    });
 }
 catch {

@@ -16,15 +16,21 @@ function signOut() {
   // [END auth_sign_out]
 }
 
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 function sendProfile() {
   window.location.href = userUrl;
 }
 
 function openAcord() {
-  if (document.getElementById("login-accordian").classList.contains("hidden") {
+  if (document.getElementById("login-accordian").classList.contains("hidden")) {
     document.getElementById("login-accordian").classList.remove("hidden");
-    await new Promise(r => setTimeout(r, 120000));
-    document.getElementById("login-accordian").classList.add("hidden");
+
+    sleep(500).then(() => {
+         document.getElementById("login-accordian").classList.add("hidden");
+    });
 }
 else {
   document.getElementById("login-accordian").classList.add("hidden");

@@ -22,7 +22,7 @@ const txtEmail = document.getElementById('email-field');
 const txtPword = document.getElementById('pass-field');
 const binSignIn = document.getElementById('log-in');
 const binSignUp = document.getElementById('sign-up');
-const binForgot = document.getElementById('forgot-pword');
+const binForgot = document.getElementById('forgot-pass');
 const binSignOut = document.getElementById('log-out');
 const binRedirect = document.getElementById('register');
 const fname = document.getElementById('fname');
@@ -137,11 +137,25 @@ try {
  }
 try {
   binRedirect.addEventListener('click', e=> {
+    binForgot.classList.add("hidden");
     binSignOut.classList.add("hidden");
     binSignIn.classList.add("hidden");
     binRedirect.classList.add("hidden");
-    document.getElementById("uname").classlist.remove("hidden");
-    document.getElementById("sign-up").classlist.remove("hidden");
+    document.getElementById("uname").classList.remove("hidden");
+    document.getElementById("sign-up").classList.remove("hidden");
+    document.getElementById("sign-in").classList.remove("hidden");
+  }); } catch {
+    console.error("ERROR 404: Redirect not found.");
+  }
+try {
+  document.getElementById("sign-in").addEventListener('click', e=> {
+    binForgot.classList.remove("hidden");
+    binSignOut.classList.remove("hidden");
+    binSignIn.classList.remove("hidden");
+    binRedirect.classList.remove("hidden");
+    document.getElementById("uname").classList.add("hidden");
+    document.getElementById("sign-up").classList.add("hidden");
+    document.getElementById("sign-in").classList.add("hidden");
   }); } catch {
     console.error("ERROR 404: Redirect not found.");
   }

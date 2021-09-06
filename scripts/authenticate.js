@@ -68,11 +68,12 @@ function signUpWithEmailPassword() {
       })
       .then(() => {
           console.log("Document successfully written!");
+          alert(1);
       })
       .catch((error) => {
           console.error("Error writing document: ", error);
       });
-      window.location.replace("https://404soundandlighting.tech");
+      window.location.href = "https://404soundandlighting.tech";
      
       // ...
     })

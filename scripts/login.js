@@ -16,9 +16,9 @@ function signOut() {
   // [END auth_sign_out]
 }
 
-document.getElementById("profile").addEventListener('click', e=> {
+function sendProfile() {
   window.location.replace(userUrl);
-});
+}
 
 function authStateListener() {
   // [START auth_state_listener]

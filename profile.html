@@ -18,6 +18,11 @@
   <body>
      <div id="top-bar">
         <img src="https://404soundandlighting.tech/images/logo.png" onclick="window.location.replace('https://404soundandlighting.tech/');", alt="Home | 404soundandlighting">
+        <div id="center">
+           <ul>
+           <a id="profile" class="hidden" onclick="sendProfile();"></a>
+           </ul>
+        </div>
         <div id="right">
              <a href="https://404soundandlighting.tech/booking">BOOK</a>
              <a onclick="modal_open();" id="login-button">LOGIN</a>
@@ -31,7 +36,13 @@
                      <input id="uname" type="text" placeholder="Username" class="hidden"></input>
                        <input id="email-field" type="text" placeholder="Email"></input>
         <input id="pass-field" type="password" placeholder="Password"></input>
+     <div id="top-buttons">
      <button id="forgot-pass">Forgot password?</button>
+        <label id="checkmark-container">Remember Me?
+        <input type="checkbox" id="tickbox"></input>
+        <span id="checkmark"></span>
+        </label>
+     </div>
                   </form>
                     <div id="form-submit">
                          <button id="log-in">Log in</button>
@@ -43,6 +54,20 @@
              </div>
           </div>
      <div id="content">
+        <div class="desc-wrapper">
+        <div id="main-desc">
+           <p class="fade" id="title-p">dj services</p>
+           <p class="fade">Get premium DJ services with us for as little as $50 NZD an hour!</p>
+        </div>
+        <div id="main-desc-two">
+           <p class="fade" id="title-p">sound systems</p>
+           <p class="fade">All plans come with quality sound systems setup by us!</p>
+        </div>
+        <div id="main-desc-three">
+             <p class="fade" id="title-p">Event Lighting</p>
+           <p class="fade">Get incredible lighting for your event with us, lighting is included in our plans!</p>
+         </div>
+        </div>
      <div id="content-wrapper">
          <footer>
       <p>404 Sound and Lighting &#169; 2021</p>

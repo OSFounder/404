@@ -150,9 +150,9 @@ try {
 try {
   document.getElementById("sign-in").addEventListener('click', e=> {
     binForgot.classList.remove("hidden");
-    binSignOut.classList.remove("hidden");
     binSignIn.classList.remove("hidden");
     binRedirect.classList.remove("hidden");
+    binSignOut.classList.add("hidden");
     document.getElementById("uname").classList.add("hidden");
     document.getElementById("sign-up").classList.add("hidden");
     document.getElementById("sign-in").classList.add("hidden");

@@ -1,31 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-<head> <meta name="viewport" content="width=device-width, initial-scale=1">
+<head> 
+<title>Hire an expert DJ in Wellington for an affordable price</title>
+<meta name="description" content="404soundandlighting provides affordable, premium DJ, sound, and lighting services to the Wellington region. Got an event coming up? We have you covered.">
+<link rel="canonical" href="https://404soundandlighting.tech/" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-   <link rel="shortcut icon" href="https://404soundandlighting.tech/favicon.ico">
-   <link rel="stylesheet" href="mainpage.css">
+   <link rel="shortcut icon" href="https://404soundandlighting.tech/icon/favicon.ico">
+   <link rel="stylesheet" href="https://404soundandlighting.tech.stylesheets/404.css">
+   <link rel="stylesheet" href="https://404soundandlighting.tech/stylesheets/mainpage.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-   <title>Home</title>
   </head>
   <body>
      <div id="top-bar">
-        <img src="logo.png" onclick="window.location.replace('https://404soundandlighting.tech/');">
+        <img src="https://404soundandlighting.tech/images/logo.png" onclick="window.location.href = 'https://404soundandlighting.tech/';", alt="Home | 404soundandlighting">
+        <div id="center">
+           <ul>
+           <a id="profile" class="hidden" onclick="openAcord();"></a>
+           </ul>
+        </div>
         <div id="right">
-           <a href="login.html">LOGIN</a>
+             <a href="https://404soundandlighting.tech/booking">BOOK</a>
+             <a onclick="modal_open();" id="login-button">LOGIN</a>
         </div>
      </div>
-     <div id="content-wrapper">
+     <div id="login-modal">
+             <div id="modal-content">
+                  <span id="modal-close" onclick="modal_close();">&times;</span>
+                  <h1 id="modal-title">login</h1>
+                  <form id="modal-login-form">
+                     <input id="uname" type="text" placeholder="Username" class="hidden"></input>
+                       <input id="email-field" type="text" placeholder="Email"></input>
+        <input id="pass-field" type="password" placeholder="Password"></input>
+     <div id="top-buttons">
+     <button id="forgot-pass">Forgot password?</button>
+        <label id="checkmark-container">Remember Me?
+        <input type="checkbox" id="tickbox"></input>
+        <span id="checkmark"></span>
+        </label>
+     </div>
+                  </form>
+                    <div id="form-submit">
+                         <button id="log-in">Log in</button>
+                       <button id="register">Sign up</button>
+                       <button id="sign-up" class="hidden">Sign up</button>
+                       <button id="sign-in" class="hidden">Log in</button>
+          </div>
+             </div>
+          </div>
+<div id="login-accordian" class="hidden">
+   <button id="log-out">Log Out</button>
+   <button onclick="sendProfile();">My Profile</button>
+</div>
+     <div id="content">
         <div id="warning">
-           <h1>Uh Oh!</h1>
-           <h2>Page not found. Error 404.</h2>
         </div>
-     </div>
+     <div id="content-wrapper">
+         <footer>
+      <p>404 Sound and Lighting &#169; 2021</p>
+              <a href="https://www.instagram.com/404dj.soundandlightingofficial/" target="_blank" class="fa fa-instagram" id="social-inst"></a>
+   </footer>
+        </div>
+   </div>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+<script type="text/javascript" src="https://404soundandlighting.tech/scripts/login.js"></script>
+<script type="text/javascript" src="https://404soundandlighting.tech/scripts/authenticate.js"></script>
+<script type="text/javascript" src="https://404soundandlighting.tech/scripts/persistance.js"></script>
+<script type="text/javascript" src="https://404soundandlighting.tech/scripts/style.js"></script>
+
+<script type="text/javascript" src="https://404soundandlighting.tech/scripts/404.js
   </body>
-     <footer>
-        <p id="copyright-content">404 Sound and Lighting &#169; 2021</p>
-     </footer>
   </html>

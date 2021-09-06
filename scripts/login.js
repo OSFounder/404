@@ -17,7 +17,7 @@ function signOut() {
 }
 
 function sendProfile() {
-  window.location.replace(userUrl);
+  window.location.href = userUrl;
 }
 
 function authStateListener() {

@@ -20,6 +20,20 @@ function sendProfile() {
   window.location.href = userUrl;
 }
 
+function openAcord() {
+  if (document.getElementById("login-accordian").classList.contains("hidden") {
+    document.getElementById("login-accordian").classList.remove("hidden");
+    await new Promise(r => setTimeout(r, 120000));
+    document.getElementById("login-accordian").classList.add("hidden");
+}
+else {
+  document.getElementById("login-accordian").classList.add("hidden");
+ }
+}
+window.onclick = function(event) {
+  document.getElementById("login-accordian").classList.add("hidden");
+}
+
 function authStateListener() {
   // [START auth_state_listener]
   

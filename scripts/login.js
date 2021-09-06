@@ -71,13 +71,13 @@ function authStateListener() {
             console.error(e);
          }
          if (firebase.auth().currentUser.emailVerified) {
-              userUrl = new URL('https://nexuslive.tech/userPage.html');
+              userUrl = new URL('https://404soundandlighting/profile');
               userUrl.searchParams.append('UID', uid);
               userUrl.searchParams.append('accountVerified', 'true');
               window.location.href = userUrl;
          }
          else {
-             userUrl = new URL('https://nexuslive.tech/userPage.html');
+             userUrl = new URL('https://404soundandlighting/profile');
              userUrl.searchParams.append('accountVerified', 'false');
              window.location.href = userUrl;
              sendVerificationEmail();

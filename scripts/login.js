@@ -1,14 +1,4 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAA8rnyKErsIZCN2itWfZMD5iu1WK-Odls",
-  authDomain: "sal-b2f24.firebaseapp.com",
-  projectId: "sal-b2f24",
-  storageBucket: "sal-b2f24.appspot.com",
-  messagingSenderId: "239998194766",
-  appId: "1:239998194766:web:7e7e7800e9000c025b9f1f",
-  measurementId: "G-YM1VPPHRVT"
-};
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+
 
 function makeGoogleCredential(googleUser) {
   // [START auth_make_google_credential]

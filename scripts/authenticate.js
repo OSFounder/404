@@ -54,7 +54,6 @@ const sendVerificationEmail = () => {
    firebase.auth().currentUser.sendEmailVerification()
    .then(() => {
       //verified
-      window.alert('Verification sent, check your inbox (may be in your spam files)');
    })
    .catch( error => {
           console.error('error');
@@ -69,6 +68,7 @@ function signUpWithEmailPassword() {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in 
+      sendVerificationEmail()
       var user = firebase.auth().currentUser;
       window.location.replace("https://404soundandlighting.tech");
      
@@ -119,7 +119,6 @@ try {
       var email = txtEmail.value;
       var password = txtPword.value;
       makeEmailCredential(email, password);
-      sendVerificationEmail()
       authStateListener();
    });
    }

@@ -24,7 +24,7 @@ const binSignIn = document.getElementById('log-in');
 const binSignUp = document.getElementById('sign-up');
 const binForgot = document.getElementById('forgot-pword');
 const binSignOut = document.getElementById('log-out');
-const binRedirect = document.getElementById('redirect');
+const binRedirect = document.getElementById('register');
 const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 var dname = document.getElementById('dname');
@@ -118,7 +118,7 @@ try {
    });
 }
 catch {
-   console.log('ERROR 404: Sign In not located.')
+   console.error('ERROR 404: Sign In not found.');
 }
 
 try {
@@ -135,6 +135,14 @@ try {
  catch(e) {
    console.error(e);
  }
+try {
+  binRedirect.addEventListener('click', e=> {
+    binSignIn.classlist.add("hidden");
+    binRedirect.classlist.add("hidden");
+    document.getElementById("uname").classlist.remove("hidden")
+  }); } catch {
+    console.error("ERROR 404: Redirect not found.");
+  }
 
 try {
    binForgot.addEventListener('click', e=> {

@@ -10,14 +10,9 @@ const firebaseConfig = {
 };
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-/*
-try {
+
 var db = firebase.firestore();
-}
-catch {
-  console.error('error loading firestore')
-}
-*/
+
 authStateListener();
 
 const txtEmail = document.getElementById('email-field');

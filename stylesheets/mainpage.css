@@ -91,11 +91,10 @@ body {
   background-image: url("https://404soundandlighting.tech/images/profiles/default_profile.png");
   background-size:contain;
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   overflow: hidden;
-  margin-top: 10px;
   margin-right: 10px;
 }
 

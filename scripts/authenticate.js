@@ -40,7 +40,7 @@ function signInWithEmailPassword() {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      // ...
+      window.location.replace("https://404soundandlighting.tech");
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -70,18 +70,7 @@ function signUpWithEmailPassword() {
     .then((userCredential) => {
       // Signed in 
       var user = firebase.auth().currentUser;
-
-      db.collection("users").add({
-          first: fname,
-          last: lname,
-          displayName: dname
-      })
-      .then((docRef) => {
-          console.log("Document written with ID: ", docRef.uid);
-      })
-      .catch((error) => {
-          console.error("Error adding document: ", error);
-      });
+      window.location.replace("https://404soundandlighting.tech");
      
       // ...
     })

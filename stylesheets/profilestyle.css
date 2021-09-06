@@ -1,1 +1,13 @@
+#profile-desc {
+    text-align: center;
+    padding: 14px 16px;
+    margin: 20px;
+    min-height: 200vh;
+}
 
+#profile-desc img {
+    border-radius: 50%;
+    width: 35%;
+    height: auto;
+    
+}

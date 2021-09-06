@@ -18,6 +18,7 @@ catch {
   console.error('error loading firestore')
 }
 */
+authStateListener();
 
 const txtEmail = document.getElementById('email-field');
 const txtPword = document.getElementById('pass-field');

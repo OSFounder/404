@@ -55,10 +55,11 @@ body: {
 @media (min-width: 1000px) {
     #navigation-bar {
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         z-index: 1;
         padding: 0px 16px;
-        background: linear-gradient(to right, #1290f8, #290082);
+        /* background: linear-gradient(to right, #1290f8, #290082);*/
+        background: rgb(256, 256, 256, 0);
         height: 70px;
         width: -webkit-fill-available;
     }
@@ -133,5 +134,5 @@ body: {
   position: absolute;
   width: -webkit-fill-available;
   height: auto;
-  z-index: 2;
+  z-index: 0;
 }

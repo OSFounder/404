@@ -1,648 +1,139 @@
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
-body {
-  min-height: 100%;
+body: {
+    background-color: white;
+    min-height: 200vh;
 }
 
-.hidden {
-  display: none !important;
+.hidden-element {
+    display: none !important;
 }
 
-.is-hidden {
-  opacity: 0;
-  transition: transform 0.8s, opacity 0.4s;
+@media (max-width: 1000px) {
+  #desktop-content {
+    display: none;
+  }
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
+@media (min-width: 1000px) {
+  #mobile-content {
+    display: none;
+  }
 }
 
-#top-bar img {
-   -webkit-transition: background 1s linear;
-  -moz-transition: background 1s linear;
-  -ms-transition: background 1s linear;
-  -o-transition: background 1s linear;
+
+#navigation-bar img:hover {
+    cursor: pointer;
+}
+
+#navigation-bar a:after {
+  content: '';
   position: absolute;
-  padding: 0px 5px;
-  height: 80px;
-  width: 80px;
-  left: 10px;
-} 
-#top-bar {
-  z-index: 1;
-  transition: transform 0.8s, opacity 0.4s;
-  overflow: visible;
-  height: 80px;
   width: 100%;
-  background-image: linear-gradient(to right, #1290f8, #290082);
-  position: sticky;
-  top: 0;
-}
-
-#top-bar #right {
-  text-align: center;
-  padding: 20px 16px;
-  float: right;
-}
-
-#top-bar #right a {
-  -webkit-transition: background 1s linear;
-  -moz-transition: background 1s linear;
-  -ms-transition: background 1s linear;
-  -o-transition: background 1s linear;
-  padding: 27px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 27px;
-  text-decoration: none;
-  color: rgb(250, 255, 251, 0.8)
-}
-
-#top-bar #right a:hover, #top-bar img:hover {
-  cursor: pointer;
-  -webkit-transition: background 1s linear;
-  -moz-transition: background 1s linear;
-  -ms-transition: background 1s linear;
-  -o-transition: background 1s linear;
-  background-color: white;
-  color: black
-}
-
-}
-@media only screen and (max-width: 800px) {
-  #top-bar #right a {
-    text-align: center;
-    display: block;
-    position: absolute;
-  }
-}
-
-#login-accordian {
-  position: relative;
-  left: 90%;
-  width: 100px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  background-color: rgb(256, 256, 256, 0.8)
-}
-
-#login-accordian button {
-  background-image: linear-gradient(to left, #1290f8, #290082);
-  font-size: 15px;
-  padding: 10px 14px;
-  width: 100px;
-  color: white;
-}
-
-#login-accordian button:hover {
-  cursor: pointer;
-}
-
-#profile {
-  float: right;
-  display: flex;
-  background-image: url("https://404soundandlighting.tech/images/profiles/default_profile.png");
-  background-size:contain;
-  background-repeat: no-repeat;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
-}
-
-#profile:hover {
-  cursor: pointer;
-}
-
-#login-modal {
-  display: none;
-  position: fixed;
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-}
-
-#modal-content {
-  opacity: 0;
-  transition: opacity 1.5s ease-in;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  background-color: #fefefe;
-  padding: 30px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-@media (max-width: 1150px) {
-  #modal-content {
-   width: 80%; 
-    margin: 15% auto; 
-  }
-}
-@media (min-width: 1150px) {
-  #modal-content {
-    width: 65%;
-    margin: 5% auto; 
-  }
-}
-
-#modal-title {
-  text-align: center;
-  padding: 14px 16px;
-  padding-bottom: 20px;
-  font-weight: 109;
-}
-
-#modal-login-form button {
-  text-decoration: none;
-  padding: 14px 16px;
-  background-color: white;
-}
-
-#modal-login-form button:hover {
-  color: blue;
-  cursor: pointer;
-}
-
-#modal-login-form input {
-  font-size: 20px;
-  display: inline-block;
-  padding: 20px 16px;
-  width: -webkit-fill-available;
-}
-
-#modal-login-form input:focus {
-  outline: none;
-}
-
-#top-buttons {
-  padding: 18px 16px;
-  font-family: arial;
-  font-size: 14px;
-  text-transform: none;
-  display: block
-  float left;
-}
-
-#forgot-pass {
-  float: right;
-}
-
-/* Customize the label (the container) */
-#checkmark-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-#checkmark-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-#checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-#checkmark-container:hover input ~ #checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-#checkmark-container input:checked ~ #checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-#checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-#checkmark-container input:checked ~ #checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-#checkmark-container #checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-
-
-#form-submit {
-  padding: 80px 16px;
-  display: flex;
-  justify-content:space-evenly;
-}
-
-#form-submit button {
-  border-radius: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  padding: 14px 16px;
-  width: 220px;
-  font-size: 20px;
-  background-image: linear-gradient(to left, #1290f8, #290082);
-  color: white;
-  font-weight: 600;
-  transition: all 2s ease;
-}
-
-#form-submit button:hover {
-  background: white;
-  color: black;
-  transition: all 2s ease;
-  cursor: pointer;
-}
-
-#modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#modal-close:hover, #modal-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.fade {
-  opacity: 0;
-}
-
-#main-desc p {
-  text-align: center;
-  max-width: 300px;
-  font-size: 30px;
-  padding: 20px 100px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: black;
-  line-height: 2;
-}
-
-#main-desc #title-p {
-  padding-top: 100px;
-  font-size: 40px;
-}
-
-#main-desc {
-  margin-bottom: 25vh;
-  z-index: 100;
-  background-image: url("https://404soundandlighting.tech/images/home/front_page_one.png");
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 40vh;
-}
-
-#main-desc-two p {
-  text-align: center;
-  float: right;
-  clear: right;
-  max-width: 350px;
-  font-size: 30px;
-  padding: 20px 100px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: black;
-  line-height: 2;
-}
-
-#main-desc-two #title-p {
-  padding-top: 100px;
-  font-size: 40px;
-}
-
-#main-desc-two {
-  z-index: 100;
-  background-image: url("https://404soundandlighting.tech/images/home/front_page_two.png");
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 40vh;
-}
-
-#main-desc-three p {
-  text-align: center;
-  max-width: 400px;
-  font-size: 30px;
-  padding: 20px 100px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: black;
-  line-height: 2;
-}
-
-#main-desc-three #title-p {
-  padding-top: 100px;
-  font-size: 40px;
-}
-
-#main-desc-three {
-  margin-top: 25vh;
-  margin-bottom: 25vh;
-  z-index: 100;
-  background-image: url("https://404soundandlighting.tech/images/home/front_page_three.png");
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 40vh;
-}
-
-#content {
-  position: absolute;
-  width: -webkit-fill-available;
-  min-height: 100vh;
-  overflow: hidden;
-  display: block;
-
-}
-
-footer {
-  transition: opacity 2s ease;
-  margin-top: 20vh;
-  position: absolute;
+  transform: scaleX(0);
+  height: 2px;
   bottom: 0;
   left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#navigation-bar a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#navigation-bar a:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    #navigation-bar {
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        padding: 0px 16px;
+        background: linear-gradient(to right, #1290f8, #290082);
+        height: 70px;
+        width: -webkit-fill-available;
+    }
+
+    #navigation-bar a {
+        position: relative;
+        display: inline-block;
+        padding: 14px 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+    }
+
+    #navigation-bar img {
+        max-height: 70px;
+        width: auto
+    }
+
+    #navigation-bar #nav-left {
+       position: absolute;
+       margin: 0;
+    }
+
+    #navigation-bar #nav-center {
+        left: 50%;
+        position: absolute;
+        text-align: center;
+    }
+
+    #navigation-bar #nav-right {
+        position: absolite;
+        float: right;
+    }
+}
+
+@media (max-width: 1000px) {
+    #navigation-bar {
+        display: block;
+        position: sticky;
+        z-index: 1;
+        padding: 0px 16px;
+        background: linear-gradient(to right, #1290f8, #290082);
+        width: -webkit-fill-available;
+    }
+
+    #navigation-bar a {
+        position: relative;
+        display: block;
+        text-align: center;
+        background: linear-gradient(to right, #1290f8, #290082);
+        width: inherit;
+        background: none;
+        padding: 20px 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+    }
+
+    #navigation-bar img {
+        max-height: 70px;
+        width: auto
+    }
+}
+
+#demo-video {
+  position: absolute;
   width: -webkit-fill-available;
-  text-align: center;
-  background-image: linear-gradient(to right, #1290f8, #290082);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: white;
-  padding: 20px 16px;
-  font-size: 13px;
+  height: auto;
+  z-index: 2;
 }
 
-footer p {
-  padding: 5px 16px;
-  font-size: 15px;
-}
-
-.fa {
-  float: left;
-  padding: 10px;
-  width: auto;
-  font-size: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 20px;
-}
-
-.fa:hover {
-  opacity: 0.8;
-}
-
-#social-inst {
-  color: white;
-  background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-}
-
-#content-wrapper {
-  padding: 14px 16px;
-  margin: 50px;
-  text-align: center;
-}
-
-#warning {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-color: black;
-  padding: 14px 16px;
-}
-
-#warning h2 {
-  padding-top: 20px;
-}
-
-#details {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-color: black;
-  padding: 14px 16px;
-}
-
-#details h1, #details h2 {
-  padding: 14px 16px;
-}
-
-@media only screen and (min-width: 1150px) {
-  #products {
-    padding: 100px;
-    display: flex;
-    flex-shrink: auto;
-    justify-content: space-around;
-    height: 100vh;
-  }
-  #products div:hover {
-    cursor: pointer;
-    transition: box-shadow 1s;
-     box-shadow: 0 0 30px rgba(33,33,33,.2); 
-  }
-  #product-one, #product-two, #product-three {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-color: black;
-    padding: 14px 16px;
-    width: 270px;
-    height: 320px;
-    text-align: center;
-    transition: border 1s;
-    border: 2px solid rgb(0, 0, 0, 0.4);
-    transition: box-shadow 1s;
-    
-  }
-  #products p {
-    padding: 6px;
-  }
-  #products #top-p{
-    padding-bottom: 30px;
-  }
-  #products #bottom-p {
-    padding-top: 30px;
-  }
-  #products a {
-    padding: 14px 16px;
-    background-image: linear-gradient(to left, #1290f8, #290082);
-    color: white;
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-  #products {
-    cursor: pointer;
-    height: 200vh;
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif;
-   font-weight: 300;
-   text-transform: uppercase;
-    text-color: black;
-  }
-
-  #product-one, #product-two, #product-three {
-    padding: 14px 16px;
-    border: 2px solid rgb(0, 0, 0, 0.7);
-    margin-bottom: 50px;
-  }
-  #products p {
-    padding: 6px;
-  }
-  #products #top-p, #products #bottom-p {
-    padding: 30px;
-  }
-  #products a {
-    padding: 14px 16px;
-    background-image: linear-gradient(to left, #1290f8, #290082);
-    color: white;
-  }
-}
-
-#parallax-content {
-  cursor: default;
-  transition: all 0.2s ease;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-#p1 h1, #p3 h1, #p5 h1 {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  padding: 40px 100px;
-  vertical-align: middle;
-  color: white;
-  background-color: rgb(0, 0, 0, 0.4);
-}
-
-#parallax-content a {
-    font-size: 20px;
-    color:white;
-    padding: 5px 40px;
-    display: inline-block;
-    cursor: pointer;
-    line-height: 50px;
-    background-image: linear-gradient(to left, #1290f8, #290082);
-}
-
-#parallax-content a:after {
-    transition: all ease-in-out 1s;
-    background: none repeat scroll 0 0 black;
-    content: "";
-    display: block;
-    width: 0;
-    border-bottom: 3px solid white;
-}
-
-#parallax-content a:hover:after {
-    width: 100%;
-}
-
-#parallax-content #p1, #parallax-content #p2, #parallax-content #p3, #parallax-content #p4, #parallax-content #p5, #parallax-content #p6 {
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-color: black ;
-}
-
-@media only screen and (max-width: 1150px) {
-  #parallax-content #p1, #parallax-content #p2, #parallax-content #p3, #parallax-content #p4, #parallax-content #p5, #parallax-content #p6 {
-    font-size: 8px;
-}
-}
-@media only screen and (min-width: 1150px) {
-  #parallax-content #p1, #parallax-content #p2, #parallax-content #p3, #parallax-content #p4, #parallax-content #p5, #parallax-content #p6 {
-    font-size: 20px;
-}
-}
-
-#parallax-content #p1 {
-  background-image: url("https://404soundandlighting.tech/images/booking/pal1.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-}
-
-#parallax-content #p3 {
-  background-image: url("https://404soundandlighting.tech/images/booking/pal2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-}
-
-#parallax-content #p5 {
-  background-image: url("https://404soundandlighting.tech/images/booking/pal3.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-}
-
-#bottom {
-  padding: 200px;
-}
 

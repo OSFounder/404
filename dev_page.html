@@ -18,23 +18,44 @@
     
   </head>
   <body>
-    <video autoplay muted loop id="demo-video">
-      <source src="https://404soundandlighting.tech/videos/demo.mp4" type="video/mp4">
-        Your Browser Does Not Support MP4 Video.
+    <div id="desktop-content">
+      <video autoplay muted loop id="demo-video">
+        <source src="https://404soundandlighting.tech/videos/demo.mp4" type="video/mp4">
+          Your Browser Does Not Support MP4 Video.
+        <div id="navigation-bar">
+          <div id="nav-left">
+            <img src="https://404soundandlighting.tech/images/logo.png" alt="HOME" title="The 404soundandlighting logo." onclick="window.location.href = 'https://404soundandlighting.tech/';">
+          </div>
+          <div id="nav-center">
+            <a id="nav-about" href="https://404soundandlighting.tech/forum/about">ABOUT</a>
+          </div>
+          <div id="nav-right">
+            <a id="nav-booking" href="https://404soundandlighting.tech/booking">BOOKING</a>
+            <a id="nav-login" onclick="//add modal function here">LOGIN</a>
+            <a id="nav-profile" class="hidden-element" onclick="//add redirect to profile function here"></a>
+          </div> 
+        </div>
+      </video>
+    </div>
+    <div id="mobile-content">
       <div id="navigation-bar">
-        <div id="nav-left">
-          <img src="https://404soundandlighting.tech/images/logo.png" alt="HOME" title="The 404soundandlighting logo." onclick="window.location.href = 'https://404soundandlighting.tech/';">
+          <div id="nav-left">
+            <img src="https://404soundandlighting.tech/images/logo.png" alt="HOME" title="The 404soundandlighting logo." onclick="window.location.href = 'https://404soundandlighting.tech/';">
+          </div>
+          <div id="nav-center">
+            <a id="nav-about" href="https://404soundandlighting.tech/forum/about">ABOUT</a>
+          </div>
+          <div id="nav-right">
+            <a id="nav-booking" href="https://404soundandlighting.tech/booking">BOOKING</a>
+            <a id="nav-login" onclick="//add modal function here">LOGIN</a>
+            <a id="nav-profile" class="hidden-element" onclick="//add redirect to profile function here"></a>
+          </div> 
         </div>
-        <div id="nav-center">
-          <a id="nav-about" href="https://404soundandlighting.tech/forum/about">ABOUT</a>
-        </div>
-        <div id="nav-right">
-          <a id="nav-booking" href="https://404soundandlighting.tech/booking">BOOKING</a>
-          <a id="nav-login" onclick="//add modal function here">LOGIN</a>
-          <a id="nav-profile" class="hidden-element" onclick="//add redirect to profile function here"></a>
-        </div> 
-      </div>
-    </video>
+      <video autoplay muted loop id="demo-video">
+        <source src="https://404soundandlighting.tech/videos/demo.mp4" type="video/mp4">
+          Your Browser Does Not Support MP4 Video.
+      </video>
+    </div>
     <div id="warning-modal">
       <div id="warning-modal-content">
         <h3 id="waring-modal-title">Warning!</h3>

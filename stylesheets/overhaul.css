@@ -13,6 +13,19 @@ body: {
     display: none !important;
 }
 
+@media (max-width: 1000px) {
+  #desktop-content {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  #mobile-content {
+    display: none;
+  }
+}
+
+
 #navigation-bar img:hover {
     cursor: pointer;
 }
@@ -85,7 +98,6 @@ body: {
 
 @media (max-width: 1000px) {
     #navigation-bar {
-        height: 40vh;
         display: block;
         position: sticky;
         z-index: 1;
@@ -115,4 +127,5 @@ body: {
         width: auto
     }
 }
+
 

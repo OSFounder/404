@@ -54,7 +54,8 @@ body: {
 
 @media (min-width: 1000px) {
     #navigation-bar {
-        position: sticky;
+        overflow: hidden;
+        position: absolute;
         z-index: 1;
         padding: 0px 16px;
         background: linear-gradient(to right, #1290f8, #290082);
@@ -128,4 +129,9 @@ body: {
     }
 }
 
-
+#demo-video {
+  position: absolute;
+  width: -webkit-fill-available;
+  height: auto;
+  z-index: 2;
+}

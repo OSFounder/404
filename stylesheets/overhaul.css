@@ -13,6 +13,32 @@ body: {
     display: none !important;
 }
 
+#navigation-bar img:hover {
+    cursor: pointer;
+}
+
+#navigation-bar a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#navigation-bar a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#navigation-bar a:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 1000px) {
     #navigation-bar {
         position: sticky;
@@ -24,7 +50,9 @@ body: {
     }
 
     #navigation-bar a {
-        padding: 0px 16px;
+        position: relative;
+        display: inline-block;
+        padding: 14px 14px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
         text-transform: uppercase;
@@ -44,14 +72,12 @@ body: {
     }
 
     #navigation-bar #nav-center {
-        padding: 14px;
         left: 50%;
         position: absolute;
         text-align: center;
     }
 
     #navigation-bar #nav-right {
-        padding: 14px;
         position: absolite;
         float: right;
     }
@@ -59,16 +85,17 @@ body: {
 
 @media (max-width: 1000px) {
     #navigation-bar {
+        height: 40vh;
         display: block;
         position: sticky;
         z-index: 1;
         padding: 0px 16px;
         background: linear-gradient(to right, #1290f8, #290082);
-        height: auto;
         width: -webkit-fill-available;
     }
 
     #navigation-bar a {
+        position: relative;
         display: block;
         text-align: center;
         background: linear-gradient(to right, #1290f8, #290082);
@@ -88,3 +115,4 @@ body: {
         width: auto
     }
 }
+

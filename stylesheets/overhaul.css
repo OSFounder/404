@@ -64,15 +64,17 @@ body: {
         z-index: 1;
         padding: 0px 16px;
         background: linear-gradient(to right, #1290f8, #290082);
-        height: 70px;
-        width: 100%;
+        height: auto;
+        width: -webkit-fill-available;
     }
 
     #navigation-bar a {
-        position: relative;
+        display: block;
+        text-align: center;
         background: linear-gradient(to right, #1290f8, #290082);
-        width: 100%;
-        padding: 14px 16px;
+        width: inherit;
+        background: none;
+        padding: 20px 16px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
         text-transform: uppercase;

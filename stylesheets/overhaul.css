@@ -164,6 +164,7 @@ body: {
 
 @media (max-width: 1000px) {
     #navigation-bar {
+        top: 0;
         display: block;
         position: sticky;
         z-index: 1;
@@ -200,3 +201,11 @@ body: {
   height: auto;
   z-index: 0;
 }
+
+#demo-video-mobile {
+  position: absolute;
+  width: -webkit-fill-available;
+  height: auto;
+  z-index: 0;
+}
+

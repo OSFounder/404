@@ -5,20 +5,27 @@
 }
 
 body: {
-    background: background: linear-gradient(to right, #1290f8, #290082);
-    min-height: 200vh;
 }
 
 .hidden-element {
     display: none !important;
 }
 
-.navbar_full {
-    background: background: linear-gradient(to right, #1290f8, #290082);
+#warning-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 400px;
+  height: 40vh;
+  text-align: center;
+  padding: 20px 20px;
+  line-height: 40px;
+  margin: 30px;
 }
 
-.navbar_invis {
-}
 
 @media (max-width: 1000px) {
   #desktop-content {

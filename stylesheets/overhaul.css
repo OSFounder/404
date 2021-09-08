@@ -5,8 +5,6 @@
 }
 
 body, html {
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
@@ -205,6 +203,7 @@ body, html {
 }
 
 #demo-video {
+  
   overflow-x: hidden;
   position: absolute;
   width: -webkit-fill-available;
@@ -255,12 +254,12 @@ footer p {
 
 .fa {
   float: left;
-  padding: 10px;
+  padding: 8px;
   width: auto;
-  font-size: 50px;
+  font-size: 40px !important;
   text-align: center;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 20%;
 }
 
 .fa:hover {
@@ -272,5 +271,6 @@ footer p {
   background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
+
 
 

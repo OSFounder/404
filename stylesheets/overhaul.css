@@ -11,6 +11,14 @@ body: {
     display: none !important;
 }
 
+.navbar-full {
+    background: linear-gradient(to right, #1290f8, #290082);
+}
+
+.navbar-empty {
+}
+    
+
 #warning-modal {
   position: fixed;
   top: 50%;

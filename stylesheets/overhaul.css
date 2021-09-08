@@ -128,6 +128,7 @@ body: {
         padding: 0px 16px;
         /* background: linear-gradient(to right, #1290f8, #290082);*/
         background: rgb(256, 256, 256, 0);
+        background: linear-gradient(to left, 50% rgb(256, 256, 256, 0), 50% #1290f8, #290082);
         height: 70px;
         width: -webkit-fill-available;
     }

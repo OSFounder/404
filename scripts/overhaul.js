@@ -10,4 +10,4 @@ warn_submit.addEventListener("click", e=> {
   warn.classList.add("hidden-element");
   document.body.style.background = "#FFFFFF"
   content.classList.remove("hidden-element");
-}
+});

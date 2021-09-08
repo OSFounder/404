@@ -37,6 +37,14 @@ try {
   }
   else {
     console.error("could not find consent");
+    warn.classList.remove("hidden-element");
+    warn_submit.addEventListener("click", e=> {
+      disable_content();
+    });
+
+    warn_exit.addEventListener("click", e=> {
+      allow_content();
+    });
   }
     
 }

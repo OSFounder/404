@@ -60,3 +60,20 @@ warn_exit.addEventListener("click", e=> {
 });
 }
 
+const detect_down = $('#scroll-detect');
+
+function to_left_nav() {
+    document.getElementById("navigation-bar").style[background-position] = "left";
+}
+
+$(window).scroll(function(){
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+        to_left_nav();
+    }
+});

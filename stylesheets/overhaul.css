@@ -59,6 +59,10 @@ body: {
   }
 }
 
+#warning-modal-content p {
+  font-weight: bold;
+}
+
 #warning-modal-content button {
   font-size: 15px;
   background-color: #EFEFEF

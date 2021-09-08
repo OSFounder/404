@@ -13,6 +13,13 @@ body: {
     display: none !important;
 }
 
+.navbar_full {
+    background: background: linear-gradient(to right, #1290f8, #290082);
+}
+
+.navbar_invis {
+}
+
 @media (max-width: 1000px) {
   #desktop-content {
     display: none;

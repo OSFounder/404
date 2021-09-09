@@ -60,7 +60,11 @@ try {
       content.classList.add("hidden-element");
       warn.classList.remove("hidden-element");
     });
-  }
+    
+    bottom_warn_submit.addEventListener("click", e=> {
+      content.classList.add("hidden-element");
+      warn.classList.remove("hidden-element");
+    }
     close_bottom_warn.addEventListener("click", e=> {
       remove_bottom_warn();
     });
@@ -80,6 +84,7 @@ try {
   }
     
 catch {
+content.classList.add("hidden-element");
 warn.classList.remove("hidden-element");
 
 warn_submit.addEventListener("click", e=> {

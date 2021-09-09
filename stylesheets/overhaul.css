@@ -273,7 +273,7 @@ footer p {
 #bottom-warn {
   padding: 14px 16px; 
   z-index: 1;
-  position: fixed;
+  position: sticky;
   background-color: white;
   width: -webkit-fill-available;
   bottom: 0;

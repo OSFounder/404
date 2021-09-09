@@ -37,6 +37,14 @@ function allow_content() {
 function remove_bottom_warn() {
   bottom_warn.classList.add("hidden-element");
 }
+
+function sleep(ms)
+{
+    return(new Promise(function(resolve, reject) {
+        setTimeout(function() { resolve(); }, ms);
+    }));
+}
+
 try {
   const warn_consent = window.sessionStorage.getItem("warning-consent");
   if (warn_consent == "false") {
@@ -51,12 +59,13 @@ try {
     bottom_warn.addEventListener("click", e=> {
       content.classList.add("hidden-element");
       warn.classList.remove("hidden-element");
-    }
+    });
+  }
     close_bottom_warn.addEventListener("click", e=> {
       remove_bottom_warn();
-    }
+    });
   
-    await new Promise(resolve => setTimeout(resolve, 60000));
+    sleep(60000);
     remove_bottom_warn();
     
     warn_submit.addEventListener("click", e=> {
@@ -69,7 +78,6 @@ try {
     
   }
     
-}
 catch {
 warn.classList.remove("hidden-element");
 
@@ -81,5 +89,7 @@ warn_exit.addEventListener("click", e=> {
   allow_content();
 });
 }
+
+
 
 

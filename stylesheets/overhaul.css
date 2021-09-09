@@ -53,10 +53,8 @@ body, html {
 
 @media(max-width: 800px) {
   #warning-modal-content {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    height: 100%;
+    font-size: 15px;
   }
 }
 
@@ -271,6 +269,9 @@ footer p {
   background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
+
+
+
 
 
 

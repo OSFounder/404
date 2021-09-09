@@ -36,6 +36,7 @@ function allow_content() {
 
 function remove_bottom_warn() {
   bottom_warn.classList.add("hidden-element");
+  warn.classList.add("hidden-element");
 }
 
 function sleep(ms)
@@ -81,16 +82,7 @@ try {
 }
     
 catch {
-content.classList.add("hidden-element");
-warn.classList.remove("hidden-element");
-
-warn_submit.addEventListener("click", e=> {
-  disable_content();
-});
-
-warn_exit.addEventListener("click", e=> {
-  allow_content();
-});
+  console.log("Query Failed");
 }
 
 

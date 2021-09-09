@@ -19,7 +19,7 @@ body, html {
 
 .navbar-empty {
 }
-    
+   
 
 #warning-modal {
   position: fixed;
@@ -230,12 +230,10 @@ body, html {
 }
 
 footer {
-  transition: opacity 2s ease;
-  margin-top: 20vh;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: -webkit-fill-available;
+  width: 100%;
+  height: 200px;
   text-align: center;
   background-image: linear-gradient(to right, #1290f8, #290082);
   font-family: 'Montserrat', sans-serif;
@@ -343,10 +341,3 @@ footer p {
 
 
  
-
-
-
-
-
-
-

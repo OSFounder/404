@@ -65,8 +65,9 @@ try {
       remove_bottom_warn();
     });
   
-    sleep(60000);
-    remove_bottom_warn();
+    sleep(60000).then(function () {
+      remove_bottom_warn();
+    }
     
     warn_submit.addEventListener("click", e=> {
       disable_content();

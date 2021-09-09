@@ -59,8 +59,7 @@ try {
     bottom_warn.classList.remove("hidden-element");
     bottom_warn_submit.addEventListener("click", e=> {
       remove_bottom_warn();
-      content.classList.add("hidden-element");
-      warn.classList.remove("hidden-element");
+      disable_content();
     });
     
     close_bottom_warn.addEventListener("click", e=> {
@@ -69,14 +68,6 @@ try {
   
     sleep(60000).then(function () {
       remove_bottom_warn();
-    });
-    
-    warn_submit.addEventListener("click", e=> {
-      disable_content();
-    });
-
-    warn_exit.addEventListener("click", e=> {
-      allow_content();
     });
   }
 }

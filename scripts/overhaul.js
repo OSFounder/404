@@ -5,11 +5,13 @@ const warn_exit = document.getElementById("exit-warn");
 const demo = document.getElementById("demo-video");
 const mobile_demo = document.getElementById("demo-video-mobile");
 const navbar = document.getElementById("navigation-bar");
+const footer = document.getElementById("foot-content");
 
 function disable_content() {
   window.sessionStorage.setItem('warning-consent', 'false');
   navbar.classList.add("navbar-full");
   navbar.classList.remove("navbar-empty");
+  footer.classList.remove("hidden-element");
   document.body.style.background = "#FFFFFF";
   demo.classList.add("hidden-element");
   mobile_demo.classList.add("hidden-element");
@@ -19,6 +21,7 @@ function disable_content() {
 
 function allow_content() {
   window.sessionStorage.setItem('warning-consent', 'true');
+  footer.classList.remove("hidden-element");
   navbar.classList.remove("navbar-full");
   navbar.classList.add("navbar-empty");
   document.body.style.background = "#FFFFFF";

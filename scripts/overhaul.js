@@ -81,8 +81,8 @@ try {
     warn_exit.addEventListener("click", e=> {
       allow_content();
     });
-    
   }
+}
     
 catch {
 content.classList.add("hidden-element");

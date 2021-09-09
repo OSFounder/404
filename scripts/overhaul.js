@@ -62,6 +62,7 @@ try {
     });
     
     bottom_warn_submit.addEventListener("click", e=> {
+      remove_bottom_warn();
       content.classList.add("hidden-element");
       warn.classList.remove("hidden-element");
     });

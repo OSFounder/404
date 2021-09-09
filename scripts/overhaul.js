@@ -6,6 +6,9 @@ const demo = document.getElementById("demo-video");
 const mobile_demo = document.getElementById("demo-video-mobile");
 const navbar = document.getElementById("navigation-bar");
 const footer = document.getElementById("foot-content");
+const bottom_warn = document.getElementById("bottom-warn");
+const bottom_warn_submit = document.getElementById("bottom-warn");
+const close_bottom_warn = document.getElementById("close-bottom-warn");
 
 function disable_content() {
   window.sessionStorage.setItem('warning-consent', 'false');
@@ -30,6 +33,10 @@ function allow_content() {
   warn.classList.add("hidden-element");
   content.classList.remove("hidden-element");
 }
+
+function remove_bottom_warn() {
+  bottom_warn.classList.add("hidden-element");
+}
 try {
   const warn_consent = window.sessionStorage.getItem("warning-consent");
   if (warn_consent == "false") {
@@ -40,7 +47,18 @@ try {
   }
   else {
     console.error("could not find consent");
-    warn.classList.remove("hidden-element");
+    bottom_warn.classList.remove("hidden-element");
+    bottom_warn.addEventListener("click", e=> {
+      content.classList.add("hidden-element");
+      warn.classList.remove("hidden-element");
+    }
+    close_bottom_warn.addEventListener("click", e=> {
+      remove_bottom_warn();
+    }
+  
+    await new Promise(resolve => setTimeout(resolve, 60000));
+    remove_bottom_warn();
+    
     warn_submit.addEventListener("click", e=> {
       disable_content();
     });
@@ -48,6 +66,7 @@ try {
     warn_exit.addEventListener("click", e=> {
       allow_content();
     });
+    
   }
     
 }

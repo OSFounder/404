@@ -90,9 +90,6 @@ $(document).ready(function () {
 			}
 			previousScroll = currentScroll;
 		}
-		if(window.scrollY<=200){
-			showNav();
-}
 	});
 
 	function hideFoot() {

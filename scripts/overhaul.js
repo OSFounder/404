@@ -77,5 +77,33 @@ catch {
 }
 
 
+$(document).ready(function () {
+	var previousScroll = 0;
+	$(window).scroll(function () {
+		var currentScroll = $(this).scrollTop();
+			
+		 if (currentScroll <= 20) {
+			if (currentScroll > previousScroll) {
+				hideFoot();
+			} else {
+				showFoot();
+			}
+			previousScroll = currentScroll;
+		}
+		if(window.scrollY<=200){
+			showNav();
+}
+	});
+
+	function hideFoot() {
+		$("foot-content").addClass("hidden-element");
+	}
+
+	function showFoot() {
+		$("foot-content").removeClass("hidden-element");
+	}
+});
+
+
 
 

@@ -1,7 +1,4 @@
 const content = document.getElementById("content");
-const warn = document.getElementById("warning-modal");
-const warn_submit = document.getElementById("warn-submit");
-const warn_exit = document.getElementById("exit-warn");
 const demo = document.getElementById("demo-video");
 const mobile_demo = document.getElementById("demo-video-mobile");
 const navbar = document.getElementById("navigation-bar");
@@ -18,7 +15,6 @@ function disable_content() {
   footer.classList.remove("hidden-element");
   demo.classList.add("hidden-element");
   mobile_demo.classList.add("hidden-element");
-  warn.classList.add("hidden-element");
 }
 
 function allow_content() {
@@ -28,7 +24,6 @@ function allow_content() {
   navbar.classList.add("navbar-empty");
   demo.classList.remove("hidden-element");
   mobile_demo.classList.remove("hidden-element");
-  warn.classList.add("hidden-element");
 }
 
 function remove_bottom_warn() {

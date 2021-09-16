@@ -52,7 +52,6 @@ try {
     allow_content();
   }
   else {
-    console.error("could not find consent");
     bottom_warn.classList.remove("hidden-element");
     bottom_warn_submit.addEventListener("click", e=> {
       remove_bottom_warn();
@@ -70,7 +69,7 @@ try {
 }
     
 catch {
-  console.log("Query Failed");
+  console.error("Query Failed");
 }
 
 

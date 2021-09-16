@@ -12,14 +12,12 @@ function disable_content() {
   window.sessionStorage.setItem('warning-consent', 'false');
   navbar.classList.add("navbar-full");
   navbar.classList.remove("navbar-empty");
-  footer.classList.remove("hidden-element");
   demo.classList.add("hidden-element");
   mobile_demo.classList.add("hidden-element");
 }
 
 function allow_content() {
   window.sessionStorage.setItem('warning-consent', 'true');
-  footer.classList.remove("hidden-element");
   navbar.classList.remove("navbar-full");
   navbar.classList.add("navbar-empty");
   demo.classList.remove("hidden-element");

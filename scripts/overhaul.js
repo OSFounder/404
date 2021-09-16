@@ -8,7 +8,6 @@ const bottom_warn_submit = document.getElementById("bottom-warn-submit");
 const close_bottom_warn = document.getElementById("close-bottom-warn");
 
 function disable_content() {
-  alert(1);
   window.sessionStorage.setItem('warning-consent', 'false');
   navbar.classList.add("navbar-full");
   navbar.classList.remove("navbar-empty");

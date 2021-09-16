@@ -27,7 +27,6 @@ body, html {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #1290f8, #290082)
 }
 
 #warning-modal-content {
@@ -157,7 +156,9 @@ body, html {
     }
 
     #navigation-bar #nav-center {
+        margin: auto;
         left: 50%;
+        transform: translate(-50%);
         position: absolute;
         text-align: center;
     }
@@ -338,5 +339,36 @@ footer p {
   cursor: pointer;
 }
 
+#top-description {
+  position: absolute;
+  padding: 14px 16px;
+  text-align: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  top: 50%;
+  width: -webkit-fill-available;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  background: none
+}
 
+#top-description p {
+  font-size: 30px !important;
+  padding: 30px 16px;
+}
 
+#top-description a{
+  background: linear-gradient(to right, #1290f8, #290082);
+  text-decoration: none;
+  color: white;
+  font-size: 25px !important;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in
+}
+
+#top-description a:hover {
+  opacity: 0.8
+}

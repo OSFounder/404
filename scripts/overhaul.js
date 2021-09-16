@@ -11,15 +11,14 @@ const bottom_warn_submit = document.getElementById("bottom-warn-submit");
 const close_bottom_warn = document.getElementById("close-bottom-warn");
 
 function disable_content() {
+  alert(1);
   window.sessionStorage.setItem('warning-consent', 'false');
   navbar.classList.add("navbar-full");
   navbar.classList.remove("navbar-empty");
   footer.classList.remove("hidden-element");
-  document.body.style.background = "#FFFFFF";
   demo.classList.add("hidden-element");
   mobile_demo.classList.add("hidden-element");
   warn.classList.add("hidden-element");
-  content.classList.remove("hidden-element");
 }
 
 function allow_content() {
@@ -27,11 +26,9 @@ function allow_content() {
   footer.classList.remove("hidden-element");
   navbar.classList.remove("navbar-full");
   navbar.classList.add("navbar-empty");
-  document.body.style.background = "#FFFFFF";
   demo.classList.remove("hidden-element");
   mobile_demo.classList.remove("hidden-element");
   warn.classList.add("hidden-element");
-  content.classList.remove("hidden-element");
 }
 
 function remove_bottom_warn() {

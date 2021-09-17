@@ -203,17 +203,13 @@ body, html {
 }
 
 #demo-video {
-  
+  object-fit: cover;
   overflow-x: hidden;
   position: absolute;
-  width: -webkit-fill-available;
-  height: auto;
+  width: 140%;
+  left: -20%;
+  height: 100vh;
   z-index: 0;
-  -moz-transform:scale(1.5);
-  -webkit-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  transform:scale(1.5);
 }
 
 #demo-video-mobile {

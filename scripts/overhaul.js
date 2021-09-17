@@ -19,9 +19,8 @@ content.classList.add("hidden-element");
 load.classList.remove("hidden-element");
 
 window.addEventListener('DOMContentLoaded', (event) => {
-   sleep(1000000); // remove this
-   load.classList.add("hidden-element");
-   content.classList.remove("hidden-element");
+   //load.classList.add("hidden-element");
+  // content.classList.remove("hidden-element");
 });
 
 function disable_content() {

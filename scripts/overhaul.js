@@ -6,6 +6,23 @@ const footer = document.getElementById("foot-content");
 const bottom_warn = document.getElementById("bottom-warn");
 const bottom_warn_submit = document.getElementById("bottom-warn-submit");
 const close_bottom_warn = document.getElementById("close-bottom-warn");
+const load = document.getElementById("load-screen");
+
+function sleep(ms)
+{
+    return(new Promise(function(resolve, reject) {
+        setTimeout(function() { resolve(); }, ms);
+    }));
+}
+
+content.classList.add("hidden-element");
+load.classList.remove("hidden-element");
+
+window.addEventListener('DOMContentLoaded', (event) => {
+   sleep(1000000); // remove this
+   load.classList.add("hidden-element");
+   content.classList.remove("hidden-element");
+});
 
 function disable_content() {
   window.sessionStorage.setItem('warning-consent', 'false');
@@ -25,13 +42,6 @@ function allow_content() {
 
 function remove_bottom_warn() {
   bottom_warn.classList.add("hidden-element");
-}
-
-function sleep(ms)
-{
-    return(new Promise(function(resolve, reject) {
-        setTimeout(function() { resolve(); }, ms);
-    }));
 }
 
 try {

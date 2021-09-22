@@ -43,6 +43,11 @@ function remove_bottom_warn() {
   bottom_warn.classList.add("hidden-element");
 }
 
+function logo_error() {
+    document.getElementById("logo-img").classList.add("hidden-element");
+    document.getElementById("logo-replace").classList.remove("hidden-element");
+}
+
 try {
   const warn_consent = window.sessionStorage.getItem("warning-consent");
   if (warn_consent == "false") {

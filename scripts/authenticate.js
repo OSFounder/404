@@ -58,7 +58,8 @@ function signUpWithEmailPassword() {
   var email = txtEmail.value;
   var password = txtPword.value;
   // [START auth_signup_password]
-  firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
       // Signed in 
       var user = firebase.auth().currentUser;
       db.collection("users").doc(user.uid).set({

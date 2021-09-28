@@ -71,7 +71,6 @@ function authStateListener() {
              userUrl = new URL('https://404soundandlighting.tech/profile');
              userUrl.searchParams.append('UID', uid);
              userUrl.searchParams.append('accountVerified', 'false');
-             sendVerificationEmail();
          }
          
 

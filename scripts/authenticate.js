@@ -11,7 +11,7 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-let db = firebase.firestore();
+const db = firebase.firestore();
 
 authStateListener();
 
@@ -58,8 +58,7 @@ function signUpWithEmailPassword() {
   var email = txtEmail.value;
   var password = txtPword.value;
   // [START auth_signup_password]
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
       // Signed in 
       sendVerificationEmail()
       var user = firebase.auth().currentUser;
@@ -117,7 +116,6 @@ catch {
 
 try {
    binSignUp.addEventListener('click', e=> {
-      signOut()
       signUpWithEmailPassword();
       var email = txtEmail.value;
       var password = txtPword.value;

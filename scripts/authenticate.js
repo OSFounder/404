@@ -60,9 +60,7 @@ function signUpWithEmailPassword() {
   // [START auth_signup_password]
   firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
       // Signed in 
-      //sendVerificationEmail()
       var user = firebase.auth().currentUser;
-    /*
       db.collection("users").doc(user.uid).set({
           username: uname
       })
@@ -73,7 +71,7 @@ function signUpWithEmailPassword() {
       .catch((error) => {
           console.error("Error writing document: ", error);
       });
-      */
+      
       window.location.href = "https://404soundandlighting.tech";
      
       // ...

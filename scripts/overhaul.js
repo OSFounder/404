@@ -112,9 +112,6 @@ $(window).on("load",function() {
         // navbar goes to blue background
 	if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
       } 
-	else if (objectBottom > windowBottom) {
-		if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-	}
 	else {
         // navbar goes to transparent background
 	if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}

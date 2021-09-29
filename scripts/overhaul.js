@@ -84,15 +84,11 @@ $(window).on("load",function() {
     $(".fade").each(function() {
       var objectBottom = $(this).offset().top + $(this).outerHeight();
  
-      if (objectBottom < windowBottom) { 
-        // navbar goes to blue background
-	document.getElementById("navigation-bar").classList.add("navbar-full");
-	document.getElementById("navigation-bar").classList.remove("navbar-empty");   
+      if (objectBottom < windowBottom) {  
+	if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
       } 
 	else {
-        // navbar goes to transparent background
-	document.getElementById("navigation-bar").classList.remove("navbar-full");
-	document.getElementById("navigation-bar").classList.add("navbar-empty"); 
+		if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
       }
     });
   }).scroll();
@@ -108,11 +104,13 @@ $(window).on("load",function() {
  
       if (objectBottom < windowBottom) { 
         // navbar goes to blue background
-	if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+	document.getElementById("navigation-bar").classList.add("navbar-full");
+	document.getElementById("navigation-bar").classList.remove("navbar-empty"); 
       } 
 	else {
         // navbar goes to transparent background
-	if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+	document.getElementById("navigation-bar").classList.remove("navbar-full");
+	document.getElementById("navigation-bar").classList.add("navbar-empty"); 
       }
     });
   }).scroll();

@@ -78,29 +78,27 @@ catch {
 }
 
 
-$(document).ready(function () {
-	var previousScroll = 0;
-	$(window).scroll(function () {
-		var currentScroll = $(this).scrollTop();
-			
-		 if (currentScroll <= 20) {
-			if (currentScroll > previousScroll) {
-				hideFoot();
-			} else {
-				showFoot();
-			}
-			previousScroll = currentScroll;
-		}
-	});
-
-	function hideFoot() {
-		$("foot-content").addClass("hidden-element");
-	}
-
-	function showFoot() {
-		$("foot-content").removeClass("hidden-element");
-	}
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+ 
+      if (objectBottom < windowBottom) { 
+        // navbar goes to blue background
+	document.getElementById("navigation-bar").classList.add("navbar-full");
+	document.getElementById("navigation-bar").classList.remove("navbar-empty");   
+      } 
+	else {
+        // navbar goes to transparent background
+	document.getElementById("navigation-bar").classList.remove("navbar-full");
+	document.getElementById("navigation-bar").classList.add("navbar-empty"); 
+      }
+    });
+  }).scroll();
 });
+
+
 
 $(window).on("load",function() {
   $(window).scroll(function() {

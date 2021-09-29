@@ -110,8 +110,12 @@ $(window).on("load",function() {
  
       if (objectBottom < windowBottom) { 
         // navbar goes to blue background
+	document.getElementById("navigation-bar").classList.add("navbar-full");
+	document.getElementById("navigation-bar").classList.remove("navbar-empty");
       } else {
         // navbar goes to transparent background
+	document.getElementById("navigation-bar").classList.remove("navbar-full");
+	document.getElementById("navigation-bar").classList.add("navbar-empty");
       }
     });
   }).scroll();

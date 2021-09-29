@@ -418,3 +418,40 @@ footer p {
   top: 25%;
   font-size: 40px;
 }
+
+#mid-description-two {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 10%x;
+  padding: 14px 16px;
+  background-image: url("https://404soundandlighting.tech/images/home/front_page_two.png");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  z-index: 100
+}
+
+#mid-description-two p {
+  position: relative;
+  top: 25%;
+  left: 75%;
+  text-align: center;
+  max-width: 300px;
+  font-size: 30px;
+  padding: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: black;
+  line-height: 2;
+}
+
+#mid-description-two h2 {
+  position: relative;
+  padding: 10px 25px;
+  left: 72%;
+  top: 25%;
+  font-size: 40px;
+}

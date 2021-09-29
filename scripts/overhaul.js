@@ -110,12 +110,14 @@ $(window).on("load",function() {
  
       if (objectBottom < windowBottom) { 
         // navbar goes to blue background
-	document.getElementById("navigation-bar").classList.add("navbar-full");
-	document.getElementById("navigation-bar").classList.remove("navbar-empty");
-      } else {
+	if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+      } 
+	else if (objectBottom > windowBottom) {
+		if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+	}
+	else {
         // navbar goes to transparent background
-	document.getElementById("navigation-bar").classList.remove("navbar-full");
-	document.getElementById("navigation-bar").classList.add("navbar-empty");
+	if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
       }
     });
   }).scroll();

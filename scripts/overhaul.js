@@ -103,7 +103,7 @@ $(window).on("load",function() {
 $(window).on("load",function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade").each(function() {
+    $("#mid-description-one").each(function() {
       var objectBottom = $(this).offset().top + $(this).outerHeight();
  
       if (objectBottom < windowBottom) { 

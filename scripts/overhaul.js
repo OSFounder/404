@@ -102,6 +102,23 @@ $(document).ready(function () {
 	}
 });
 
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $("navigation-bar").each(function() {
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+ 
+      if (objectBottom < windowBottom) { 
+        // navbar goes to blue background
+      } else {
+        // navbar goes to transparent background
+      }
+    });
+  }).scroll();
+});
+
+
+
 
 
 

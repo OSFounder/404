@@ -224,7 +224,6 @@ body, html {
 
 #demo-video-mobile {
   width: 100%;
-  left: -20%;
   object-fit: cover;
   overflow-x: hidden;
   position: relative;

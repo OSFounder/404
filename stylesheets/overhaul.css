@@ -69,7 +69,7 @@ body, html {
 
 #warning-modal-content button {
   font-size: 15px;
-  background-color: #EFEFEF
+  background-color: #EFEFEF;
   color: black;
   display: inline-block;
   text-decoration: none;
@@ -183,7 +183,7 @@ body, html {
         z-index: 1;
         padding: 0px 16px;
         background: linear-gradient(to right, #1290f8, #290082);
-        width: -webkit-fill-available;
+        width: 100%;
     }
 
     #navigation-bar a {
@@ -223,11 +223,11 @@ body, html {
 }
 
 #demo-video-mobile {
-  width: 140%;
+  width: 100%;
   left: -20%;
   object-fit: cover;
   overflow-x: hidden;
-  position: absolute;
+  position: relative;
   height: auto;
   z-index: 0;
   -moz-transform:scale(1.5);

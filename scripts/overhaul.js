@@ -116,8 +116,12 @@ $(window).on("load",function() {
   }).scroll();
 });
 
-
-
-
+function login_modal() {
+	if (document.getElementById("login-modal").classList.contains("hidden-element") {
+	    document.getElementById("login-modal").classList.remove("hidden-element");
+	    } else {
+		   document.getElementById("login-modal").classList.add("hidden-element"); 
+	    }
+}
 
 

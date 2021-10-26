@@ -6,7 +6,7 @@ const footer = document.getElementById("foot-content");
 const bottom_warn = document.getElementById("bottom-warn");
 const bottom_warn_submit = document.getElementById("bottom-warn-submit");
 const close_bottom_warn = document.getElementById("close-bottom-warn");
-const load = document.getElementById("load-screen");
+//const load = document.getElementById("load-screen");
 
 function sleep(ms)
 {
@@ -19,7 +19,7 @@ content.classList.add("hidden-element");
 load.classList.remove("hidden-element");
 
 window.addEventListener('DOMContentLoaded', (event) => {
-   	load.classList.add("hidden-element");
+   	//load.classList.add("hidden-element");
   	content.classList.remove("hidden-element");
 });
 

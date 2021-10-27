@@ -15,12 +15,8 @@ function sleep(ms)
     }));
 }
 
-content.classList.add("hidden-element");
-load.classList.remove("hidden-element");
-
 window.addEventListener('DOMContentLoaded', (event) => {
-   	//load.classList.add("hidden-element");
-  	content.classList.remove("hidden-element");
+   	// add load code here
 });
 
 function disable_content() {

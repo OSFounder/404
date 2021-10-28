@@ -15,11 +15,11 @@ function sleep(ms)
     }));
 }
 
-function modal_open() {
+function login_modal_open() {
 	 document.getElementById("login-modal").classList.remove("hidden-element");
 }
 
-function modal_close() {
+function login_modal_close() {
 	 document.getElementById("login-modal").classList.add("hidden-element");
 }
 

@@ -15,18 +15,12 @@ function sleep(ms)
     }));
 }
 
-window.addEventListener('DOMContentLoaded', (event) => {
-   	// add load code here
-});
+function modal_open() {
+	 document.getElementById("login-modal").classList.remove("hidden-element");
+}
 
-function login_modal() {
-	if (document.getElementById("login-modal").classList.contains("hidden-element")) {
-	    document.getElementById("login-modal").classList.remove("hidden-element");
-	    } 
-	
-	else {
-		   document.getElementById("login-modal").classList.add("hidden-element"); 
-	    }
+function modal_close() {
+	 document.getElementById("login-modal").classList.add("hidden-element");
 }
 
 

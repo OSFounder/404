@@ -521,3 +521,16 @@ footer p {
   background-color: white;
   height: 75%;
 }
+
+#form-title {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+
+#login-form input {
+  width: 75%;
+  height: 50px;
+  color: black;
+  background-color: white;
+}

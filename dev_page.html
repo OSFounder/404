@@ -35,10 +35,19 @@
       <div id="login-modal" class="hidden-element">
           <div id="login-content">
               <p id="title">LOGIN</p>
-              <form>
+              <form id="login-form">
+                  <input type="text" id="email-field" placeholder="Email"></input><br>
+                  <input type="password" id="pass-field" placeholder="Password"></input><br>
+          	      <input type="button" id="submit" onclick="">Register</input><br>
               </form>
-              <p id="andor">OR</p>
-              <p id="option">SIGN UP</P>
+              <form id="register-form" class="hidden-element">
+                  <input type="text" id="uname" placeholder="Username"></input><br>
+                  <input type="text" id="email-field" placeholder="Email"></input><br>
+                  <input type="password" id="pass-field" placeholder="Password"></input><br>
+                  <input type="password" id="pass-field-confirm" placeholder="Confirm Password"></input><br>
+        `         <input type="button" id="submit" onclick="">Register</input><br>
+                  <input type="button" id="switch2" onclick="">login</input><br>
+              </form>
           </div>
         </div>
         <div id="video-content">

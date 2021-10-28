@@ -19,6 +19,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
    	// add load code here
 });
 
+function login_modal() {
+	if (document.getElementById("login-modal").classList.contains("hidden-element")) {
+	    document.getElementById("login-modal").classList.remove("hidden-element");
+	    } 
+	
+	else {
+		   document.getElementById("login-modal").classList.add("hidden-element"); 
+	    }
+}
+
+
+
 function disable_content() {
   window.sessionStorage.setItem('warning-consent', 'false');
   navbar.classList.add("navbar-full");
@@ -111,13 +123,3 @@ $(window).on("load",function() {
     });
   }).scroll();
 });
-
-function login_modal() {
-	if (document.getElementById("login-modal").classList.contains("hidden-element")) {
-	    document.getElementById("login-modal").classList.remove("hidden-element");
-	    } else {
-		   document.getElementById("login-modal").classList.add("hidden-element"); 
-	    }
-}
-
-

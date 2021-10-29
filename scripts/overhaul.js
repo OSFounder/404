@@ -23,6 +23,17 @@ function login_modal_close() {
 	 document.getElementById("login-modal").classList.add("hidden-element");
 }
 
+function login_modal_register() {
+	documtent.getElementById("login-form").classList.add("hidden-element");
+	documtent.getElementById("register-form").classList.remove("hidden-element");
+}
+
+function login_modal_login() {
+	documtent.getElementById("register-form").classList.add("hidden-element");
+	documtent.getElementById("login-form").classList.remove("hidden-element");
+}
+
+
 
 
 function disable_content() {

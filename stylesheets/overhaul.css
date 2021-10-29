@@ -506,6 +506,7 @@ footer p {
 }
 
 #login-content {
+  border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
@@ -529,9 +530,30 @@ footer p {
 
 
 #login-form input {
+  border: none;
+  outline: none;
   width: 75%;
   height: 50px;
   color: black;
   background-color: white;
 }
 
+#login-form input:hover {
+  cursor: pointer;
+}
+
+#submit:hover {
+  color: blue;
+  border: none !important;
+}
+
+#alternate:hover {
+  color: blue;
+  border: none !important;
+}
+
+#login-form p {
+  margin-top: 60px;
+  font-size: 25px;
+  padding: 20px 20px;
+}

@@ -14,6 +14,10 @@ body, html {
     display: none !important;
 }
 
+.transparent-element {
+    opacity: 0;
+}
+
 .navbar-full {
     background: linear-gradient(to right, #1290f8, #290082) !important;
 }

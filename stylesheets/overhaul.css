@@ -510,14 +510,15 @@ footer p {
 #login-content {
   margin-top: 10vh;
   margin-bottom: 10vh;
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   color: black;
   line-height: 2;
   font-size: 30px;
-  padding: 14px 16px;
+  padding: 20px 16px;
+  overflow: hidden;
   text-align: center;
   background-color: white;
   height: 75%;
@@ -544,12 +545,12 @@ footer p {
 }
 
 #submit:hover {
-  color: blue;
+  color: #1290f8;
   border: none !important;
 }
 
 #alternate:hover {
-  color: blue;
+  color: #1290f8;
   border: none !important;
 }
 
@@ -559,3 +560,12 @@ footer p {
   padding: 20px 20px;
 }
 
+#login-content #bottom-decor {
+  width: 1000px;
+  margin-top: 15px;
+  margin-left: -100px;
+  bottom: 0%;
+  height: 40px;
+  position: relative;
+  background: #1290f8;
+}

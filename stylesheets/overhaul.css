@@ -564,6 +564,10 @@ footer p {
   cursor: pointer;
 }
 
+#submit, #alternate {
+  width: 70px !important;
+}
+
 #submit:hover {
   color: #1290f8;
   border: none !important;
@@ -599,3 +603,4 @@ footer p {
   position: relative;
   background: #1290f8;
 }
+

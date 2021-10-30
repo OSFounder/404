@@ -604,3 +604,22 @@ footer p {
   background: #1290f8;
 }
 
+#register-form input {
+  font-size: 15px;
+  padding: 0px 14px;
+  outline: none;
+  color: black;
+  background: white;
+}
+
+#uname {
+  margin-left: 12px;
+}
+
+#register-form p {
+  font-size: 25px;
+  padding: 20px 20px;
+}
+
+
+

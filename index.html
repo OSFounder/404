@@ -1,92 +1,188 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
-<head> 
-<title>Hire an expert DJ in Wellington for an affordable price</title>
-<meta name="description" content="404soundandlighting provides affordable, premium DJ, sound, and lighting services to the Wellington region. Got an event coming up? We have you covered.">
-<link rel="canonical" href="https://404soundandlighting.co.nz/" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-   <link rel="shortcut icon" href="https://404soundandlighting.co.nz/icon/favicon.ico">
-   <link rel="stylesheet" href="https://404soundandlighting.co.nz/stylesheets/mainpage.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+<html lang="en-nz"><head> 
+    <title>Hire an expert DJ in the Greater Wellington Region for an affordable price</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://404soundandlighting.tech/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://404soundandlighting.tech/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://404soundandlighting.tech/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://404soundandlighting.tech/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://404soundandlighting.tech/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://404soundandlighting.tech/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="https://404soundandlighting.tech/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404soundandlighting provides affordable, premium DJ, sound, and lighting services to the Wellington region. Got an event coming up? We have you covered.">
+    
+    <link rel="stylesheet" href="https://404soundandlighting.tech/stylesheets/overhaul.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&amp;display=swap" rel="stylesheet">
+    
+    
   </head>
   <body>
-     <div id="top-bar">
-        <img src="https://404soundandlighting.co.nz/images/logo.png" onclick="window.location.href = 'https://404soundandlighting.co.nz/';", alt="Home | 404soundandlighting">
-        <div id="center">
-           <ul>
-           <a id="profile" class="hidden" onclick="openAcord();"></a>
-           </ul>
-        </div>
-        <div id="right">
-             <a href="https://404soundandlighting.co.nz/booking">BOOK</a>
-             <a onclick="modal_open();" id="login-button">LOGIN</a>
-        </div>
-     </div>
-     <div id="login-modal">
-             <div id="modal-content">
-                  <span id="modal-close" onclick="modal_close();">&times;</span>
-                  <h1 id="modal-title">login</h1>
-                  <form id="modal-login-form">
-                     <input id="uname" type="text" placeholder="Username" class="hidden"></input>
-                       <input id="email-field" type="text" placeholder="Email"></input>
-        <input id="pass-field" type="password" placeholder="Password"></input>
-     <div id="top-buttons">
-     <button id="forgot-pass">Forgot password?</button>
-        <label id="checkmark-container">Remember Me?
-        <input type="checkbox" id="tickbox"></input>
-        <span id="checkmark"></span>
-        </label>
-     </div>
-                  </form>
-                    <div id="form-submit">
-                         <button id="log-in">Log in</button>
-                       <button id="register">Sign up</button>
-                       <button id="sign-up" class="hidden">Sign up</button>
-                       <button id="sign-in" class="hidden">Log in</button>
+    <div id="noscript-content">
+   <!-- <div id="load-screen">
+        <img id="load" src="https://404soundandlighting.tech/images/logo.png">
+    </div> -->
+    <div id="content">
+    <div id="desktop-content">
+      <div id="login-modal" class="hidden-element">
+          <div id="login-content">
+              <span id="close" onclick="login_modal_close();">&times;</span>
+              <form id="login-form">
+                  <h2 id="form-title">Login to your 404DJ account</h2>
+                  <input type="text" id="email-field" placeholder="Email"></input><br>
+                  <input type="password" id="pass-field" placeholder="Password"></input><br>
+                  <p id="error" class="transparent-element">Oops! The email or password was incorrect!</p>
+          	      <input type="button" id="submit" value="Login" onclick=""></input><br>
+                  <p>Don't have a 404DJ account?</p>
+                  <input type="button" id="alternate" value="Sign Up" onclick="login_modal_register();"></input><br>  
+              </form>
+              <form id="register-form" class="hidden-element">
+                  <h2 id="form-title">Sign Up for 404DJ</h2><br>
+                  <input type="text" id="uname" placeholder="Username"></input><br>
+                  <input type="text" id="email-field" placeholder="Email"></input><br>
+                  <input type="password" id="pass-field" placeholder="Password"></input><br>
+                  <input type="password" id="pass-field-confirm" placeholder="Confirm Password"></input><br>
+                  <input type="button" id="submit" value="Sign Up" onclick=""></input><br>
+                  <p>Already have a 404DJ account?</p>
+                  <input type="button" id="alternate" value="Login" onclick="login_modal_login();"></input><br>
+              </form>
+              <div id="bottom-decor"></div>
           </div>
-             </div>
+        </div>
+        <div id="video-content">
+      <video autoplay="" muted="" loop="" id="demo-video">
+        <source src="https://404soundandlighting.tech/videos/demo.mp4" type="video/mp4">
+          Your Browser Does Not Support MP4 Video.
+        </video>
+        <div id="navigation-bar">
+          <div id="nav-left">
+            <img id="logo-img" src="https://404soundandlighting.tech/images/logo.png" onerror="logo_error();" title="Home" onclick="window.location.href = 'https://404soundandlighting.tech/';">
+              <a id="logo-replace" class="hidden-element" href="https://404soundandlighting.tech/">HOME</a>
           </div>
-<div id="login-accordian" class="hidden">
-   <button id="log-out">Log Out</button>
-   <button onclick="sendProfile();">My Profile</button>
-</div>
-     <div id="content">
-        <div class="desc-wrapper">
-        <div id="main-desc">
-           <p class="fade" id="title-p">dj services</p>
-           <p class="fade">Get premium DJ services with us for as little as $50 NZD an hour!</p>
+          <div id="nav-center">
+            <a id="nav-about" href="https://404soundandlighting.tech/forum/about">ABOUT</a>
+              <a id="nav-com" href="https://404soundandlighting.tech/forum/community">COMMUNITY</a>
+          </div>
+          <div id="nav-right">
+            <a id="nav-booking" href="https://404soundandlighting.tech/booking">BOOKING</a>
+            <a id="nav-login" onclick="login_modal_open();">LOGIN</a>
+            <a id="nav-profile" class="hidden-element" onclick="//add redirect to profile function here"></a>
+          </div> 
         </div>
-        <div id="main-desc-two">
-           <p class="fade" id="title-p">sound systems</p>
-           <p class="fade">All plans come with quality sound systems setup by us!</p>
+      <div id="top-description">
+        <p id="description-text">Plan the perfect event with 404 Sound And Lighting</p>
+        <a href="https://404soundandlighting.tech/booking">Book an expert DJ</a>
+      </div>
         </div>
-        <div id="main-desc-three">
-             <p class="fade" id="title-p">Event Lighting</p>
-           <p class="fade">Get incredible lighting for your event with us, lighting is included in our plans!</p>
+        <div id="mid-description-one">
+            <h2 class="fade" id="content-title" class="fade">DJ SERVICES</h2>
+            <p class="fade" id="content">Get premium DJ services with us for as little as $50 NZD an hour!</p>
+        </div>
+        <div id="mid-description-two">
+            <h2 class="fade" id="content-title">SOUND SYSTEMS</h2>
+            <p class="fade" id="content">ALL PLANS COME WITH QUALITY SOUND SYSTEMS SETUP BY US!</p>
+        </div>
+        <div id="mid-description-three">
+            <h2 class="fade" id="content-title">EVENT LIGHTING</h2>
+            <p class="fade" id="content">GET INCREDIBLE LIGHTING FOR YOUR EVENT WITH US, LIGHTING IS INCLUDED IN OUR PLANS!</p>
+        </div>
+    </div> <!--END DESKTOP -->
+    <div id="mobile-content">
+      <div id="navigation-bar">
+          <div id="nav-left">
+            <img src="https://404soundandlighting.tech/images/logo.png" alt="HOME" title="The 404soundandlighting logo." onclick="window.location.href = 'https://404soundandlighting.tech/';">
+          </div>
+          <div id="nav-center">
+            <a id="nav-about" href="https://404soundandlighting.tech/forum/about">ABOUT</a>
+              <a id="nav-com" href="https://404soundandlighting.tech/forum/community">COMMUNITY</a>
+          </div>
+          <div id="nav-right">
+            <a id="nav-booking" href="https://404soundandlighting.tech/booking">BOOKING</a>
+            <a id="nav-login" onclick="login_modal()">LOGIN</a>
+            <a id="nav-profile" class="hidden-element" onclick="//add redirect to profile function here"></a>
+          </div> 
+        </div>
+      <video autoplay="" muted="" loop="" id="demo-video-mobile">
+        <source src="https://404soundandlighting.tech/videos/demo.mp4" type="video/mp4">
+          Your Browser Does Not Support MP4 Video.
+      </video>
+    </div>
+    </div>
+    <div id="content-wrapper">
+     <div id="bottom-warn" class="hidden-element">
+      <div id="bottom-warn-content">
+        <span id="close-bottom-warn">×</span>
+        <p>If you want to disable epilepsy triggering elements</p>
+        <button id="bottom-warn-submit">Click here.</button>
+      </div>
+    </div>
+    </div>
+      </div> <!--END MOBILE CONTEND-->
+     <noscript>
+       <div id="noscript-warning">
+         <h1 class="noscript-title">Uh Oh! Theres no one to DJ!</h1>
+         <p class="noscript-description">Without javascript (JS) This website will cease to function! To view the website you must enable javascript (JS).</p>
+         <img class="logo" src="https://404soundandlighting.tech/images/logo.png" alt="404soundandlighting.tech logo">
+      <style>
+        #noscript-content {
+          display: none;
+        }
+        
+        #noscript-warning {
+            margin-top: 5% !important;
+            text-align: center;
+            width: 70%;
+            padding: 40px 40px;
+            margin: 20% auto;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 40px;
+            color: white;
+          }
+          
+          #noscript-warning p {
+              font-size: 20px;
+          }
+          
+          #noscript-warning img {
+              box-shadow: 20px 20px 30px rgba(33,33,33,.7);
+              margin-top: 100px;
+              width: 200px;
+              height: auto;
+              background-color: black;
+              border-radius: 8px;
+          }
+          
+          body {
+              background-image: linear-gradient(to right, #1290f8, #290082);
+          }
+       </style>
          </div>
-        </div>
-     <div id="content-wrapper">
-         <footer>
-      <p>404 Sound and Lighting &#169; 2021</p>
-              <a href="https://www.instagram.com/404dj.soundandlightingofficial/" target="_blank" class="fa fa-instagram" id="social-inst"></a>
-   </footer>
-        </div>
-   </div>
-<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+         
+           </noscript>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
 
-<script type="text/javascript" src="https://404soundandlighting.co.nz/scripts/login.js"></script>
-<script type="text/javascript" src="https://404soundandlighting.co.nz/scripts/authenticate.js"></script>
-<script type="text/javascript" src="https://404soundandlighting.co.nz/scripts/persistance.js"></script>
-<script type="text/javascript" src="https://404soundandlighting.co.nz/scripts/style.js"></script>
-  </body>
-  </html>
+  <script type="text/javascript" src="https://404soundandlighting.tech/scripts/overhaul.js"></script>
+  <script type="text/javascript" src="https://404soundandlighting.tech/scripts/login.js"></script>
+  <script type="text/javascript" src="https://404soundandlighting.tech/scripts/authenticate.js"></script>
+  <script type="text/javascript" src="https://404soundandlighting.tech/scripts/persistance.js"></script>
+  <script type="text/javascript" src="https://404soundandlighting.tech/scripts/style.js"></script>
+         <footer id="foot-content">
+      <p>404 Sound and Lighting © 2021</p>
+      <a href="https://www.instagram.com/404dj.soundandlightingofficial/" target="_blank" class="fa fa-instagram" id="social-inst"></a>
+   </footer>
+</html>

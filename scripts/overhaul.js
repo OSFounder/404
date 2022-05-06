@@ -85,11 +85,10 @@ try {
     });
   }
 }
-*/ 
 catch {
   console.error("Query Failed");
 }
-
+*/
 
 $(window).on("load",function() {
   $(window).scroll(function() {

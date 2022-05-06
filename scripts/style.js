@@ -55,7 +55,7 @@ function plan_three() {
 });
 }
 
-
+/*
 $(window).on("load",function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
@@ -70,7 +70,7 @@ $(window).on("load",function() {
     });
   }).scroll();
 });
-
+*/
 var login_modal = document.getElementById("login-modal");
 var modal_content = document.getElementById("modal-content");
 

@@ -399,6 +399,12 @@ footer p {
   z-index: 100
 }
 
+#mid-description-one img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 #mid-description-one p {
   position: relative;
   top: 25%;
